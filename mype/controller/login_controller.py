@@ -10,6 +10,7 @@ class LoginController:
         login_model=LoginModel()
             
         estado_header,codigo_header=header_controller.valdar_header(request.headers)
+        estado_header == False
         if(estado_header):
             token=request.headers['Authorization']
             verificartoken=Token()
