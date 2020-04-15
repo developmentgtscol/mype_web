@@ -1,5 +1,6 @@
 from validator import Required, Equals,  validate
-
+from ..ficheros.codigo import Generador
+generador = Generador()
 class HeaderController:
     def validar_header(self,header):
         rules = {
@@ -8,5 +9,9 @@ class HeaderController:
           "Accept-Charset": [Required,Equals('ISO-8859-1')],
         }
         respuesta=validate(rules, header)
-        return respuesta[0],respuesta[1]
+        if respuesta[0]:
+            return True,''
+        else:
+            codigo = generador.validarGuardarInformacionError("000","validar header- no se enviaron todo los parametros- header_controller","post",'')    
+            return False ,codigo
         

@@ -10,7 +10,7 @@ class Conexion:
 		cred = credentials.Certificate(r'setting/mype-9c1d1-firebase-adminsdk-4hnvz-095114c5a6.json')
 		# iniciar la app de firebase
 		firebase_admin.initialize_app(cred, {
-			'databaseURL': 'https://geosales-e9e98.firebaseio.com/',
+			'databaseURL': 'https://mype-9c1d1.firebaseio.com/',
 			#'databaseAuthVariableOverride': {
         	#'uid': 'Geosales_Ññ1234'  }
 		})

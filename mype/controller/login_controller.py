@@ -1,9 +1,12 @@
 from mype.controller.header_controller import HeaderController
-from validator import Required, Equals,  validate
+from validator import Required, Equals,  validate,In
 import re
 from mype.model.token_model import Token
 from mype.model.login_model import LoginModel
+from mype.clases.validaciones import Validaciones
+from ..ficheros.codigo import Generador
 
+generador = Generador()
 class LoginController:
     def validar_login(self,request):
         header_controller=HeaderController()
@@ -15,29 +18,32 @@ class LoginController:
             verificartoken=Token()
             estado_token,codigo_token=verificartoken.validar_token_fb(token)
             if estado_token == False:
-                estado_json,codigo_json=
+                validaciones=Validaciones();
+                estado_json,codigo_json=validaciones.validar_json(request)
                 if estado_json:
                     rules = {
-                    "uid": [Required],
-                    "tipo_cliente": [Required],
+                    "uid_cliente": [Required],
+                    "tipo_cliente": [Required,In(["ADMIN", "EMPRESA", "TIENDA","CLIENTE"])],
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
-                        uid=request.json['uid']
-                        estado_login,codigo_model=login_model.validarlogin(uid)
+                        uid_cliente=request.json['uid_cliente']
+                        tipo_cliente=request.json['tipo_cliente']
+                        estado_login,codigo_model=login_model.validarlogin(uid_cliente,tipo_cliente)
                         if estado_login:
-                            return {'estado':True,'codigo':'sixa'}
+                            return {'estado':True,'mensaje':'login exitoso'}
                         else:
-                            return {'estado':False,'codigo':'login1122'}
+                            return {'estado':False,'codigo':codigo_model}
                         
                     else:
-                        return {'estado':False,'codigo':'1122campos'}
+                        codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- login_controller","post",'')
+                        return {'estado':False,'codigo':codigo}
                 else:
-                    pass
+                    return {'estado':False,'codigo':codigo_json}
             else:
-                return {'estado':False,'codigo':'1122token'}
+                return {'estado':False,'codigo':codigo_token}
         else:
-            return {'estado':False,'codigo':'1122header'}
+            return {'estado':False,'codigo':codigo_header}
 
          
     def validar_email(self,correo):

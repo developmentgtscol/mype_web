@@ -1,0 +1,58 @@
+536957906157;000;metodo invalido;post;comercial;04/15/20;07:58:02
+90921128065;000;validar header- no se enviaron todo los parametros- header_controller;post;;04/15/20;09:45:24
+37039916296;000;validar header- no se enviaron todo los parametros- header_controller;post;;04/15/20;09:46:50
+119480856708;000;validar header- no se enviaron todo los parametros- header_controller;post;;04/15/20;09:52:37
+514262839;000;validar token- token invalido- token_model;post;;04/15/20;09:52:37
+2534420906;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/15/20;09:52:37
+779519498;000;validar token- token invalido- token_model;post;;04/15/20;09:52:37
+4548015182;000;validar si lleva json la consulta- no se enviaron json- validaciones;post;;04/15/20;09:52:37
+8055684583;000;validar token- token invalido- token_model;post;;04/15/20;09:52:37
+27369966769;000;metodo invalido;post;comercial;04/15/20;09:52:37
+7401102053;000;validar token- token invalido- token_model;post;;04/15/20;09:57:06
+122265760189;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/15/20;09:57:06
+88880794169;000;validar token- token invalido- token_model;post;;04/15/20;09:57:06
+44539630811;000;metodo invalido;post;comercial;04/15/20;09:57:06
+0310663935;000;validar token- token invalido- token_model;post;;04/15/20;09:59:35
+780505702194;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/15/20;09:59:35
+319810668;000;validar token- token invalido- token_model;post;;04/15/20;09:59:35
+77978099391;000;validar token- token invalido- token_model;post;;04/15/20;10:02:12
+3744744663;000;validar login- no existe la referencia de la db- login_model;post;;04/15/20;10:02:12
+582618075704;000;validar token- token invalido- token_model;post;;04/15/20;10:03:17
+15385644653;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;10:03:17
+781272208108;000;validar token- token invalido- token_model;post;;04/15/20;10:08:41
+1050254339;000;validar token- token invalido- token_model;post;;04/15/20;10:08:41
+9951601610;000;validar token- token invalido- token_model;post;;04/15/20;10:08:41
+2476960949;000;validar token- token invalido- token_model;post;;04/15/20;10:39:43
+97512581690;000;validar token- token invalido- token_model;post;;04/15/20;10:40:08
+536237336;000;validar token- token invalido- token_model;post;;04/15/20;10:40:08
+438844491;000;validar token- token invalido- token_model;post;;04/15/20;10:40:08
+29995023020;000;validar token- token invalido- token_model;post;;04/15/20;10:42:21
+43153161511;000;validar token- token invalido- token_model;post;;04/15/20;10:44:12
+63909919375;000;validar token- token invalido- token_model;post;;04/15/20;10:51:48
+82172302265;000;validar token- token invalido- token_model;post;;04/15/20;10:52:14
+126446891;000;validar token- token invalido- token_model;post;;04/15/20;10:52:24
+384378555;000;validar token- token invalido- token_model;post;;04/15/20;10:52:56
+568194836889;000;validar token- token invalido- token_model;post;;04/15/20;10:53:15
+6834898725;000;validar token- token invalido- token_model;post;;04/15/20;10:53:53
+0870948632;000;validar token- token invalido- token_model;post;;04/15/20;10:54:02
+20272232393;000;validar token- token invalido- token_model;post;;04/15/20;10:54:15
+5860673463;000;validar token- token invalido- token_model;post;;04/15/20;10:54:31
+667827811;000;validar token- token invalido- token_model;post;;04/15/20;10:54:31
+1072125185;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;10:54:31
+879706084;000;validar token- token invalido- token_model;post;;04/15/20;10:55:51
+0979206584;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;10:55:51
+05190403692;000;validar token- token invalido- token_model;post;;04/15/20;11:02:04
+365228981314;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:02:04
+3692771357;000;validar token- token invalido- token_model;post;;04/15/20;11:02:39
+47750577832;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:02:39
+993950918;000;validar token- token invalido- token_model;post;;04/15/20;11:03:00
+17302895674;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:03:00
+94163751825;000;validar token- token invalido- token_model;post;;04/15/20;11:03:14
+4784431595;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:03:14
+52467646176;000;validar token- token invalido- token_model;post;;04/15/20;11:04:48
+618883833202;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:04:48
+417916419;000;validar token- token invalido- token_model;post;;04/15/20;11:05:05
+436074475652;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:05:05
+0752226795;000;validar token- token invalido- token_model;post;;04/15/20;11:05:14
+587952657658;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:05:14
+4717352411;000;validar token- token invalido- token_model;post;;04/15/20;11:05:14

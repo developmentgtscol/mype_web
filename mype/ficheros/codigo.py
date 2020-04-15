@@ -1,9 +1,11 @@
-import random
-import string
+# librerias necesarias 
 import random
 from random import randrange
-from mype.ficheros.fichero import Fichero
-class Generator:
+from .fichero import Fichero
+import random
+import string
+
+class Generador:
       
     def __init__(self):
         self.fichero=Fichero()
@@ -33,3 +35,57 @@ class Generator:
     def generador_password(self):
         lettersAndDigits = string.ascii_letters + string.digits
         return ''.join(random.choice(lettersAndDigits) for i in range(12))
+
+    def generate_tabla(self,tipo):
+        if tipo == 'general':
+            return True,'empresa'
+        elif tipo == 'comercial':
+            return True,'comercial'
+        elif tipo == 'supervisor':
+            return True,'supervisor'
+        elif tipo == 'vendedor':
+            return True, 'vendedor'
+        else:
+            return False,''
+
+    def generador_de_formato_moneda(self, num, simbolo="US$", n_decimales=2):
+        """Convierte el numero en un string en formato moneda
+        SetMoneda(45924.457, 'RD$', 2) --> 'RD$ 45,924.46'     
+        """
+        #con abs, nos aseguramos que los dec. sea un positivo.
+        n_decimales = abs(n_decimales)
+        
+        #se redondea a los decimales idicados.
+        num = round(num, n_decimales)
+
+        try:
+            #se divide el entero del decimal y obtenemos los string
+            num, dec = str(num).split(".")
+            #si el num tiene menos decimales que los que se quieren mostrar,
+            #se completan los faltantes con ceros.
+            dec += "0" * (n_decimales - len(dec))
+        except:
+            num = str(num)
+
+        #se invierte el num, para facilitar la adicion de comas.
+        num = num[::-1]
+        
+        #se crea una lista con las cifras de miles como elementos.
+        l = [num[pos:pos+3][::-1] for pos in range(0,50,3) if (num[pos:pos+3])]
+        l.reverse()
+        
+        #se pasa la lista a string, uniendo sus elementos con comas.
+        num = str.join(",", l)
+        
+        #si el numero es negativo, se quita una coma sobrante.
+        try:
+            if num[0:2] == "-,":
+                num = "-%s" % num[2:]
+        except IndexError:
+            pass
+        
+        #si no se especifican decimales, se retorna un numero entero.
+        if not n_decimales:
+            return "%s %s" % (simbolo, num)
+            
+        return "%s %s.%s" % (simbolo, num, dec)

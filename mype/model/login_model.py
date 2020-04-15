@@ -1,10 +1,19 @@
 from firebase_admin import db
+from ..ficheros.codigo import Generador
+
+generador = Generador()
+
 class LoginModel:
-    def validarlogin(self,uid):
-        datos=db.reference('adminGeo').child(uid).get()
-        if datos is not None:
-                return True,''
-        else:
-            #codigo=self.generador.validarGuardarInformacionError("403","Usuario no posee permiso","post","undefined")
-            return False,'no exite codigo' 
+    def validarlogin(self,uid,tipo_cliente):
+        try:
+            datos = db.reference('geo'+tipo_cliente).order_by_child('user_uid').get()
+            if datos['user_uid'] == uid:
+                    return True,''
+            else:
+                codigo = generador.validarGuardarInformacionError("000","validar login- usuario no existe o no permitido para este login- login_model","post",'')
+                return False,codigo
+            
+        except :
+            codigo = generador.validarGuardarInformacionError("000","validar login- ocurrio un error- login_model","post",'')
+            return False,codigo
         
