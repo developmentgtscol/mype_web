@@ -4,6 +4,7 @@ from mype.view.login_view import login_view
 from mype.setting.conexion import Conexion
 from .config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
+from flask_cors import CORS,cross_origin
 
 # constructor
 config = Config()
@@ -12,10 +13,12 @@ Conexion()
 
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 app.config.update(iniciar)
 csrf = CSRFProtect(app)
 
 @csrf.exempt
+@cross_origin()
 @app.route('/login/',methods=['POST'])
 
 def login():
