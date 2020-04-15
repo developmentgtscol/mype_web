@@ -9,27 +9,31 @@ class LoginController:
         header_controller=HeaderController()
         login_model=LoginModel()
             
-        estado_header,codigo_header=header_controller.valdar_header(request.headers)
-        if(estado_header):
+        estado_header,codigo_header=header_controller.validar_header(request.headers)
+        if(estado_header == True):
             token=request.headers['Authorization']
             verificartoken=Token()
             estado_token,codigo_token=verificartoken.validar_token_fb(token)
             if estado_token == False:
-                rules = {
-                "uid": [Required],
-                "tipo_cliente": [Required],
-                }
-                respuesta=validate(rules, request.json)
-                if(respuesta[0]):
-                    uid=request.json['uid']
-                    estado_login,codigo_model=login_model.validarlogin(uid)
-                    if estado_login:
-                        return {'estado':True,'codigo':'sixa'}
+                estado_json,codigo_json=
+                if estado_json:
+                    rules = {
+                    "uid": [Required],
+                    "tipo_cliente": [Required],
+                    }
+                    respuesta=validate(rules, request.json)
+                    if(respuesta[0]):
+                        uid=request.json['uid']
+                        estado_login,codigo_model=login_model.validarlogin(uid)
+                        if estado_login:
+                            return {'estado':True,'codigo':'sixa'}
+                        else:
+                            return {'estado':False,'codigo':'login1122'}
+                        
                     else:
-                        return {'estado':False,'codigo':'login1122'}
-                    
+                        return {'estado':False,'codigo':'1122campos'}
                 else:
-                    return {'estado':False,'codigo':'1122campos'}
+                    pass
             else:
                 return {'estado':False,'codigo':'1122token'}
         else:
