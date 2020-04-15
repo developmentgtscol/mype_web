@@ -56,3 +56,5 @@
 0752226795;000;validar token- token invalido- token_model;post;;04/15/20;11:05:14
 587952657658;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:05:14
 4717352411;000;validar token- token invalido- token_model;post;;04/15/20;11:05:14
+864694766;000;validar token- token invalido- token_model;post;;04/15/20;12:07:07
+44315748499;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/15/20;12:07:07
