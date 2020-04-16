@@ -15,4 +15,4 @@ class Token:
         except :
             codigo = generador.validarGuardarInformacionError("000","validar token- token invalido- token_model","post",'')
             # en esta parte se retorna un parametro que viene siendo el un False que indica que no fue exito la validacion
-            return False,codigo
+            return True,codigo
