@@ -5,8 +5,7 @@ class HeaderController:
     def validar_header(self,header):
         rules = {
           "Authorization": [Required],
-          "Content-Type": [Required,Equals('application/json')],
-          "Accept-Charset": [Required,Equals('ISO-8859-1')],
+          "Content-Type": [Required,Equals('application/json')]
         }
         respuesta=validate(rules, header)
         if respuesta[0]:

@@ -10,7 +10,7 @@ from flask_cors import CORS,cross_origin
 # constructor
 config = Config()
 iniciar = config.iniciar()
-Conexion()
+
 
 
 app = Flask(__name__)
