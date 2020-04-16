@@ -1,6 +1,7 @@
 from flask import Flask,request,jsonify, make_response
 from mype.view.ejemplo import vista_de_ejemplo
 from mype.view.login_view import login_view
+from mype.view.registro_view import RegistroView
 from mype.setting.conexion import Conexion
 from .config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
@@ -9,7 +10,7 @@ from flask_cors import CORS,cross_origin
 # constructor
 config = Config()
 iniciar = config.iniciar()
-Conexion()
+#Conexion()
 
 
 app = Flask(__name__)
@@ -20,7 +21,6 @@ csrf = CSRFProtect(app)
 @csrf.exempt
 @cross_origin()
 @app.route('/login/',methods=['POST'])
-
 def login():
   v=login_view(request);
   if v['estado']==True:
@@ -32,6 +32,13 @@ def login():
         resp = make_response(v)
         resp.headers['server'] = 'SERVER_NAME'
         return resp      
+
+@csrf.exempt
+@app.route('/registrar_usuario_admin/',methods=['POST'])
+def registrar_cliente():
+      registro_view=RegistroView()
+      respuesta=registro_view.registrar_usuario_admin(request)
+      return jsonify(respuesta)
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)
