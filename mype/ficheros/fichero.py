@@ -29,27 +29,27 @@ class Fichero:
     nombre = archivos.asignar_archivo(r'D:\Documentos\Geosales\G_Del1\mype\ficheros\scripts')
     # sacar la columna clave para verifica si la clave esta repetida y tomar el error
     try:
-      file = pd.read_csv(r'D:\Documentos\Geosales\G_Del1\mype\ficheros\scripts\fichero_1.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
+      file = pd.read_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\fichero_1.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
       lista = list(file['clave'])
       clave = int(clave)
       count = lista.count(clave)
     except:
        # guardar el archivo
       df = pd.DataFrame(data)
-      df.to_csv(r'D:\Documentos\Geosales\G_Del1\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
+      df.to_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
       return True
     # validar que no exista codigo
     if count == 0:
       # guardar el archivo
       df = pd.DataFrame(data)
-      df.to_csv(r'D:\Documentos\Geosales\G_Del1\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
+      df.to_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
       return True
     else:
       return False
 
   # Lectura en el fichero
   def read(self):
-    df = pd.read_csv(r'D:\Documentos\Geosales\G_Del1\mype\ficheros\scripts\fichero.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
+    df = pd.read_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\fichero.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
     print(df)
 
 # c = Fichero()
