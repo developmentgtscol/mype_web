@@ -26,30 +26,46 @@ class Fichero:
     }
     # clase para decidir en que archivo de guarda los datos 
     archivos = Archivo()
-    nombre = archivos.asignar_archivo(r'D:\Documentos\Geosales\G_Del1\mype\ficheros\scripts')
+    nombre = archivos.asignar_archivo(r'C:\Mundo\proyectos_python\proyecto-mype\mype\ficheros\scripts')
     # sacar la columna clave para verifica si la clave esta repetida y tomar el error
     try:
+<<<<<<< HEAD
       file = pd.read_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\fichero_1.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
+=======
+      file = pd.read_csv(r'C:\Mundo\proyectos_python\proyecto-mype\mype\ficheros\scripts\fichero_1.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
+>>>>>>> 1c981bd54011b2fa60b3c6790b2fd47c9c31d399
       lista = list(file['clave'])
       clave = int(clave)
       count = lista.count(clave)
     except:
        # guardar el archivo
       df = pd.DataFrame(data)
+<<<<<<< HEAD
       df.to_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
+=======
+      df.to_csv(r'C:\Mundo\proyectos_python\proyecto-mype\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
+>>>>>>> 1c981bd54011b2fa60b3c6790b2fd47c9c31d399
       return True
     # validar que no exista codigo
     if count == 0:
       # guardar el archivo
       df = pd.DataFrame(data)
+<<<<<<< HEAD
       df.to_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
+=======
+      df.to_csv(r'C:\Mundo\proyectos_python\proyecto-mype\mype\ficheros\scripts\{}'.format(nombre), mode='a+', index=False, header=False, sep=';', decimal=',')
+>>>>>>> 1c981bd54011b2fa60b3c6790b2fd47c9c31d399
       return True
     else:
       return False
 
   # Lectura en el fichero
   def read(self):
+<<<<<<< HEAD
     df = pd.read_csv(r'D:\Documentos\Geomatic\G_Del1\mype\ficheros\scripts\fichero.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
+=======
+    df = pd.read_csv(r'C:\Mundo\proyectos_python\proyecto-mype\mype\ficheros\scripts\fichero.csv', sep=';', names=['clave', 'codigo_http', 'descripcion', 'metodo', 'tipo', 'fecha', 'hora'])
+>>>>>>> 1c981bd54011b2fa60b3c6790b2fd47c9c31d399
     print(df)
 
 # c = Fichero()

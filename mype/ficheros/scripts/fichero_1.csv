@@ -56,7 +56,12 @@
 0752226795;000;validar token- token invalido- token_model;post;;04/15/20;11:05:14
 587952657658;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/15/20;11:05:14
 4717352411;000;validar token- token invalido- token_model;post;;04/15/20;11:05:14
+<<<<<<< HEAD
 63315379911;000;validar token- token invalido- token_model;post;;04/15/20;22:50:58
 125194437;000;validar si lleva json la consulta- no se enviaron json- validaciones;post;;04/15/20;22:50:58
 783585024384;000;validar token- token invalido- token_model;post;;04/15/20;22:50:58
 18524041077;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/15/20;22:50:58
+=======
+864694766;000;validar token- token invalido- token_model;post;;04/15/20;12:07:07
+44315748499;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/15/20;12:07:07
+>>>>>>> 1c981bd54011b2fa60b3c6790b2fd47c9c31d399
