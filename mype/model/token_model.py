@@ -8,6 +8,7 @@ class Token:
     def validar_token_fb(self,token):
         try:
             # en esta parte se verifica que el token resivido por parametro es correcto de no ser haci se ejecuta la parte del except del try
+            print(token)
             decoded_token = auth.verify_id_token(token)
             
             # en esta parte se toma el uid del usuario que a enviado el token y a sido verificado correctamente
