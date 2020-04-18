@@ -24,7 +24,7 @@ class LoginController:
                 if estado_json:
                     rules = {
                     "uid_cliente": [Required],
-                    "tipo_cliente": [Required,In(["ADMIN", "GERENTE", "ADM_TIENDAS", "CLIENTE "])],
+                    "tipo_cliente": [Required,In(["ADMIN", "GERENTE", "ADM_TIENDAS", "CLIENTES"])],
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
