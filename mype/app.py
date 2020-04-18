@@ -2,6 +2,7 @@ from flask import Flask,request,jsonify, make_response
 from mype.view.ejemplo import vista_de_ejemplo
 from mype.view.login_view import login_view
 from mype.view.registro_view import RegistroView
+from mype.view.solicitudes_view import SolicitudesView
 from mype.setting.conexion import Conexion
 from .config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
@@ -32,7 +33,7 @@ def login():
         resp = make_response(v)
         resp.headers['server'] = 'SERVER_NAME'
         return resp      
-
+@csrf.exempt
 @app.route('/registrar_usuario_gerente/',methods=['POST'])
 def registrar_gerente():
       registro_view=RegistroView()
@@ -47,10 +48,10 @@ def registrar_tienda():
       return jsonify(respuesta)
 
 @csrf.exempt
-@app.route('/registrar_cliente/',methods=['POST'])
-def registrar_cliente():
-      registro_view=RegistroView()
-      respuesta=registro_view.registrar_cliente(request)
+@app.route('/solicitar_listaadmintiendas/',methods=['POST'])
+def solicitar_lista_admin_tiendas():
+      solicitudes_view=SolicitudesView();
+      respuesta=solicitudes_view.solicitar_lista_admin_tiendas(request)
       return jsonify(respuesta)
 # iniciador
 if __name__ == '__main__':

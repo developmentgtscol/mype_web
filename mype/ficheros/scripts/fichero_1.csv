@@ -412,6 +412,7 @@
 >>>>>>> 29ff36e411f1ba954f7601b11388937353b1ee81
 1632240213;000;validar email si existe - email si existe - validaciones;post;;04/16/20;11:42:12
 237442108058;000;crear cliente;POST;admin;04/16/20;11:42:12
+<<<<<<< HEAD
 >>>>>>> 9d31da0833afbb4f1de9e891ae1c0245580573c8
 421109986030;000;validar login gerente- usuario no existe o no permitido para este login- login_model;post;;04/17/20;15:29:44
 6668675039;000;validar login gerente- usuario no existe o no permitido para este login- login_model;post;;04/17/20;15:29:44
@@ -422,3 +423,20 @@
 34555085006;000;validar token- token invalido- token_model;post;;04/18/20;09:47:32
 6375374110;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;09:47:32
 300603574;000;validar login- usuario no existe o no permitido para este login- login_model;post;;04/18/20;09:47:32
+=======
+9288748933;000;validar token- token invalido- token_model;post;;04/17/20;15:46:51
+2455322900;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/17/20;15:46:51
+89904884612;000;validar email si existe - email si existe - validaciones;post;;04/17/20;15:46:51
+068884288384;000;validar token- token invalido- token_model;post;;04/17/20;15:47:21
+4435762512;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/17/20;15:47:21
+26329468767;000;validar permiso admin- usuario no tiene permiso de admin- validaciones;post;;04/17/20;15:47:21
+666312726078;000;validar token- token invalido- token_model;post;;04/17/20;15:47:21
+328045312;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/17/20;15:47:21
+985034796462;000;validar token- token invalido- token_model;post;;04/17/20;16:32:38
+5940315592;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/17/20;16:32:38
+84160585557;000;validar telefono si existe - telefono si existe - validaciones;post;;04/17/20;16:32:38
+0746951743;000;validar token- token invalido- token_model;post;;04/17/20;16:32:38
+2665549448;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/17/20;16:32:38
+045929148623;000;validar token- token invalido- token_model;post;;04/18/20;10:26:48
+3705870384;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/18/20;10:26:48
+>>>>>>> a5b3731012b80ad30f7b14a3fe768df4f77671ba

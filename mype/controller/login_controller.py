@@ -29,6 +29,7 @@ class LoginController:
                     if(respuesta[0]):
                         uid_cliente=request.json['uid_cliente']
                         tipo_cliente=request.json['tipo_cliente']
+                        print(uid_cliente, tipo_cliente, '--------------')
                         estado_login,codigo_model=login_model.validarlogin(uid_cliente,tipo_cliente)
                         if estado_login:
                             return {'estado':True,'mensaje':'login exitoso'}
