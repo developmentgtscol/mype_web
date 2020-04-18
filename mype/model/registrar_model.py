@@ -6,7 +6,7 @@ class RegistrarModel:
             user = auth.create_user(email=datos['correo_usuario_registrar'],
              phone_number="+57"+datos['telefono_usuario_registrar'],
             display_name=datos['nombre_usuario_registrar'],
-            password='password_usuario_registrar')
+             password=datos['password_usuario_registrar'])
             
             datos_guardar = {
                 'uid_user_registra':datos['uid_usuario'],
@@ -49,7 +49,7 @@ class RegistrarModel:
                 user = auth.create_user(email=datos['correo_cliente'],
                 phone_number="+57"+datos['telefono_cliente'],
                 display_name=datos['nombre_cliente'],
-                password='password_cliente')
+                password=datos['password_usuario_registrar'])
                 
                 datos_guardar = {
                     'nombre_cliente':datos['nombre_cliente'],
