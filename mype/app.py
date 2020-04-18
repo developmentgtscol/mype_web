@@ -10,7 +10,7 @@ from flask_cors import CORS,cross_origin
 # constructor
 config = Config()
 iniciar = config.iniciar()
-#Conexion()
+
 
 
 app = Flask(__name__)
@@ -33,11 +33,24 @@ def login():
         resp.headers['server'] = 'SERVER_NAME'
         return resp      
 
-@csrf.exempt
-@app.route('/registrar_usuario_admin/',methods=['POST'])
-def registrar_cliente():
+@app.route('/registrar_usuario_gerente/',methods=['POST'])
+def registrar_gerente():
       registro_view=RegistroView()
       respuesta=registro_view.registrar_usuario_admin(request)
+      return jsonify(respuesta)
+
+@csrf.exempt
+@app.route('/registrar_tienda/',methods=['POST'])
+def registrar_tienda():
+      registro_view=RegistroView()
+      respuesta=registro_view.registrar_tienda(request)
+      return jsonify(respuesta)
+
+@csrf.exempt
+@app.route('/registrar_cliente/',methods=['POST'])
+def registrar_cliente():
+      registro_view=RegistroView()
+      respuesta=registro_view.registrar_cliente(request)
       return jsonify(respuesta)
 # iniciador
 if __name__ == '__main__':
