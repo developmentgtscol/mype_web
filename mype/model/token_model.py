@@ -17,7 +17,6 @@ class Token:
             # en esta parte se retornan dos parametros que vienen siendo el primero un True de que indica que fue exitoso la validacion y el otro el uid del usuario
             return True,uid
         except Exception as e:
-            print(e)
             codigo = generador.validarGuardarInformacionError("000","validar token- token invalido- token_model","post",'')
             # en esta parte se retorna un parametro que viene siendo el un False que indica que no fue exito la validacion
-            return True,codigo
+            return False,codigo

@@ -439,4 +439,17 @@
 2665549448;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/17/20;16:32:38
 045929148623;000;validar token- token invalido- token_model;post;;04/18/20;10:26:48
 3705870384;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/18/20;10:26:48
+<<<<<<< HEAD
 >>>>>>> a5b3731012b80ad30f7b14a3fe768df4f77671ba
+=======
+679252799747;000;validar token- token invalido- token_model;post;;04/18/20;11:40:17
+647312374950;000;validar token- token invalido- token_model;post;;04/18/20;11:40:17
+812571657;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;11:40:17
+4236158881;000;validar token- token invalido- token_model;post;;04/18/20;11:40:17
+07575764310;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;11:40:17
+72517840389;000;validar token- token invalido- token_model;post;;04/18/20;11:42:05
+3132892080;000;validar login gerente- usuario no existe o no permitido para este login- login_model;post;;04/18/20;11:42:05
+454101727;000;validar token- token invalido- token_model;post;;04/18/20;11:42:33
+4836833443;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/18/20;11:42:33
+43513093102;000;validar token- token invalido- token_model;post;;04/18/20;11:42:33
+>>>>>>> fe766107cb10f9c261c66db6a13f2af1e3b43e11
