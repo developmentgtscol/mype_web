@@ -17,19 +17,19 @@ class LoginController:
             token=request.headers['Authorization']
             verificartoken=Token()
             estado_token,codigo_token=verificartoken.validar_token_fb(token)
+            print('--------------------')
             if estado_token == True:
                 validaciones=Validaciones();
                 estado_json,codigo_json=validaciones.validar_json(request)
                 if estado_json:
                     rules = {
                     "uid_cliente": [Required],
-                    "tipo_cliente": [Required,In(["ADMIN", "GERENTE", "ADM_TIENDAS"])],
+                    "tipo_cliente": [Required,In(["ADMIN", "GERENTE", "ADM_TIENDAS", "CLIENTE "])],
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
                         uid_cliente=request.json['uid_cliente']
                         tipo_cliente=request.json['tipo_cliente']
-                        print(uid_cliente, tipo_cliente, '--------------')
                         estado_login,codigo_model=login_model.validarlogin(uid_cliente,tipo_cliente)
                         if estado_login:
                             return {'estado':True,'mensaje':'login exitoso'}

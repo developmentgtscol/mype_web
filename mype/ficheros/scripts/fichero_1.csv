@@ -453,3 +453,14 @@
 4836833443;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/18/20;11:42:33
 43513093102;000;validar token- token invalido- token_model;post;;04/18/20;11:42:33
 >>>>>>> fe766107cb10f9c261c66db6a13f2af1e3b43e11
+61122014370;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;12:02:47
+1043916146;000;validar token- token invalido- token_model;post;;04/18/20;12:02:47
+29741955780;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;12:02:47
+676542228105;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;12:02:47
+784955470;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
+4572625849;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
+7936211105;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
+75826650120;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
+1377264090;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
+1438484614;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
+255034532;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/18/20;13:18:18
