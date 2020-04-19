@@ -511,3 +511,5 @@
 01792591117;000;validar token- token invalido- token_model;post;;04/18/20;14:08:13
 736284040;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/18/20;14:08:13
 51013018904;000;validar token- token invalido- token_model;post;;04/18/20;14:09:06
+815811981472;000;validar email si existe - email si existe - validaciones;post;;04/19/20;09:19:52
+07160587156;000;crear cliente;POST;admin;04/19/20;09:19:52
