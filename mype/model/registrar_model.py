@@ -49,7 +49,7 @@ class RegistrarModel:
                 user = auth.create_user(email=datos['correo_cliente'],
                 phone_number="+57"+datos['telefono_cliente'],
                 display_name=datos['nombre_cliente'],
-                password=datos['password_usuario_registrar'])
+                password=datos['password_cliente'])
                 
                 datos_guardar = {
                     'nombre_cliente':datos['nombre_cliente'],
