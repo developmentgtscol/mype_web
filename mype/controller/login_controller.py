@@ -17,7 +17,6 @@ class LoginController:
             token=request.headers['Authorization']
             verificartoken=Token()
             estado_token,codigo_token=verificartoken.validar_token_fb(token)
-            print('--------------------')
             if estado_token == True:
                 validaciones=Validaciones();
                 estado_json,codigo_json=validaciones.validar_json(request)

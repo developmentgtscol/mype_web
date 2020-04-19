@@ -511,3 +511,8 @@
 01792591117;000;validar token- token invalido- token_model;post;;04/18/20;14:08:13
 736284040;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/18/20;14:08:13
 51013018904;000;validar token- token invalido- token_model;post;;04/18/20;14:09:06
+3678654600;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;08:43:09
+04292564203;000;validar token- token invalido- token_model;post;;04/19/20;08:43:37
+17968639431;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;08:43:37
+581374453552;000;validar token- token invalido- token_model;post;;04/19/20;08:43:37
+53341260081;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;08:43:37
