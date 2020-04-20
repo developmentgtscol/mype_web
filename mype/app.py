@@ -40,7 +40,6 @@ def registrar_gerente():
       respuesta=registro_view.registrar_usuario_admin(request)
       return jsonify(respuesta)
 
-@csrf.exempt
 @app.route('/registrar_tienda/',methods=['POST'])
 def registrar_tienda():
       registro_view=RegistroView()
@@ -66,7 +65,7 @@ def solicitar_lista_tiendas():
       solicitudes_view=SolicitudesView();
       respuesta=solicitudes_view.solicitar_lista_tiendas(request)
       return jsonify(respuesta)     
-@csrf.exempt
+
 @app.route('/asignar_tienda/',methods=['POST'])
 def solicitar_asignar_tienda():
       asignar_view=AsignarView();
