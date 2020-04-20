@@ -2,14 +2,14 @@ from mype.clases.validaciones import Validaciones
 from validator import Required, Equals,  validate,In,Pattern
 from mype.model.token_model import Token
 from ..ficheros.codigo import Generador
-from mype.model.solicitudes_model import SolicitudesModel
 from mype.controller.header_controller import HeaderController
+from mype.model.asignar_model import AsignarModel
 header_controller=HeaderController()
 verificartoken=Token()
 validaciones=Validaciones();
 generador = Generador()
-class SolictudesController:
-    def solicitudes_admin_gerente(self,request,tipo):
+class AsignarController:
+    def asignar_tienda(self,request):
         estado_header,codigo_header=header_controller.validar_header(request.headers)
         if estado_header:
             token=request.headers['Authorization']
@@ -19,6 +19,8 @@ class SolictudesController:
                 if estado_json:
                     rules = {
                     "uid_usuario": [Required],
+                    "uid_admin_tienda":[Required],
+                    "uid_tienda":[Required]
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
@@ -28,14 +30,13 @@ class SolictudesController:
                             estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,token)
                             if estado_uid_token:
                                 estado_permisoadmingerente,codigo_permisoadmingerente=validaciones.validar_tipo_admin_gerente(uid_usuario)
-                                
                                 if estado_permisoadmingerente:
-                                    solicitudes_model=SolicitudesModel()
-                                    estado_solictud,codigo_solicitud=solicitudes_model.solicitudes_admin_gerente(request.json,tipo)
-                                    if estado_solictud:
-                                        return  {'estado':True,'mensaje':'registro exitoso','datos':codigo_solicitud}
+                                    asignar_model=AsignarModel()
+                                    estado_asignar,codigo_asignar=asignar_model.asignar_tienda(request.json)
+                                    if estado_asignar:
+                                        return  {'estado':True,'mensaje':'asignacion exitosa'}
                                     else:
-                                        return  {'estado':False,'codigo':codigo_solicitud}
+                                        return  {'estado':False,'codigo':codigo_asignar}
                                 else:
                                     return {'estado':False,'codigo':codigo_permisoadmingerente}
                             else:

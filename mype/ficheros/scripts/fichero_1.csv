@@ -513,3 +513,118 @@
 51013018904;000;validar token- token invalido- token_model;post;;04/18/20;14:09:06
 815811981472;000;validar email si existe - email si existe - validaciones;post;;04/19/20;09:19:52
 07160587156;000;crear cliente;POST;admin;04/19/20;09:19:52
+078733527186;000;validar email si existe - email si existe - validaciones;post;;04/19/20;10:03:15
+2418667385;000;validar header- no se enviaron todo los parametros- header_controller;post;;04/19/20;13:26:54
+2834334131;000;validar token- token invalido- token_model;post;;04/19/20;13:26:54
+085988216943;000;validar si lleva json la consulta- no se enviaron json- validaciones;post;;04/19/20;13:26:54
+048515247775;000;validar token- token invalido- token_model;post;;04/19/20;13:26:54
+472188226;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/19/20;13:26:54
+9303892955;000;validar token- token invalido- token_model;post;;04/19/20;13:26:54
+454890899;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:26:54
+8073234668;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:26:54
+626290476;000;validar token- token invalido- token_model;post;;04/19/20;13:50:13
+81269982793;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:50:13
+818708195;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:50:13
+605215775712;000;validar token- token invalido- token_model;post;;04/19/20;13:50:13
+188507909889;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:50:13
+908191296;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:50:13
+597756937066;000;validar token- token invalido- token_model;post;;04/19/20;13:50:58
+340660526697;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:50:58
+905712313663;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:50:58
+38645236561;000;validar token- token invalido- token_model;post;;04/19/20;13:51:10
+149789410512;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:51:10
+9630228654;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:51:10
+89711389063;000;validar token- token invalido- token_model;post;;04/19/20;13:51:10
+90363221229;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:51:10
+377480144818;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:51:10
+409501688555;000;validar token- token invalido- token_model;post;;04/19/20;13:51:23
+6826897295;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:51:23
+484773598;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:51:23
+7397435756;000;validar token- token invalido- token_model;post;;04/19/20;13:51:56
+91583805274;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:51:56
+848012433678;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;13:51:56
+354291884;000;validar token- token invalido- token_model;post;;04/19/20;13:52:05
+933175559030;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:52:05
+128211851724;000;validar token- token invalido- token_model;post;;04/19/20;13:52:11
+9364866724;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:52:11
+111683405696;000;validar token- token invalido- token_model;post;;04/19/20;13:53:00
+7981106315;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:53:00
+0932679488;000;validar token- token invalido- token_model;post;;04/19/20;13:53:09
+594375076389;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:53:09
+602861038;000;validar token- token invalido- token_model;post;;04/19/20;13:53:24
+161087011;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:53:24
+02481337437;000;validar token- token invalido- token_model;post;;04/19/20;13:53:35
+3068548932;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;13:53:35
+28810162352;000;validar token- token invalido- token_model;post;;04/19/20;21:40:50
+6189595970;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;21:40:50
+413289236349;000;validar token- token invalido- token_model;post;;04/19/20;21:41:35
+7700075475;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;21:41:35
+685679354923;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:15:20
+8832230702;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:15:20
+240960159;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:15:20
+889431118670;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:15:53
+73716195245;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:15:53
+724500590;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:16:34
+189095476375;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:18:25
+755340797282;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:18:48
+498773681;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:19:06
+08074939833;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:19:06
+24424610501;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:19:06
+15491700698;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:19:06
+143467155908;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:19:58
+342123914429;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:20:41
+928323646;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:20:52
+7792939003;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:21:06
+6033939065;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:21:48
+342217735;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:22:12
+4756538541;000;se valida que los valores resivido no sean null -campos null -validaciones;post;undefined;04/19/20;22:23:59
+25590850707;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:24:17
+7342144011;000;se valida que los valores resivido no sean null -campos null -validaciones;post;undefined;04/19/20;22:24:24
+493488338;000;validar email si existe - email si existe - validaciones;post;;04/19/20;22:24:32
+288910229247;000;se valida que los valores resivido no sean null -campos null -validaciones;post;undefined;04/19/20;22:24:45
+275322312304;000;validar token- token invalido- token_model;post;;04/19/20;22:27:41
+71169481802;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;22:27:41
+5093151072;000;validar token- token invalido- token_model;post;;04/19/20;22:27:41
+45080799437;000;se valida que los valores resivido no sean null -campos null -validaciones;post;undefined;04/19/20;22:27:41
+238391630;000;validar token- token invalido- token_model;post;;04/19/20;22:28:49
+833557395581;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;22:28:49
+709341574;000;validar token- token invalido- token_model;post;;04/19/20;22:28:49
+347568424;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;22:28:49
+579574812427;000;validar token- token invalido- token_model;post;;04/19/20;22:28:49
+2508699566;000;se valida que los valores resivido no sean null -campos null -validaciones;post;undefined;04/19/20;22:28:49
+454342264;000;validar token- token invalido- token_model;post;;04/19/20;23:26:54
+271989515;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/19/20;23:26:54
+03959229318;000;validar token- token invalido- token_model;post;;04/19/20;23:26:54
+57370164404;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:26:54
+987357494;000;validar token- token invalido- token_model;post;;04/19/20;23:26:54
+267254714638;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:26:54
+254116309;000;validar token- token invalido- token_model;post;;04/19/20;23:31:40
+37481102663;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:31:40
+166788175;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;04/19/20;23:31:40
+699616785709;000;validar token- token invalido- token_model;post;;04/19/20;23:31:40
+270867588455;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:31:40
+434587331;000;validar token- token invalido- token_model;post;;04/19/20;23:35:43
+54373538523;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:35:43
+2412236158;000;validar token- token invalido- token_model;post;;04/19/20;23:35:43
+627444463038;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:35:43
+1329444066;000;validar token- token invalido- token_model;post;;04/19/20;23:35:43
+401006355582;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:35:43
+576146641139;000;validar token- token invalido- token_model;post;;04/19/20;23:35:43
+416379191937;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/19/20;23:35:43
+71146286379;000;validar token- token invalido- token_model;post;;04/20/20;01:04:24
+015015162706;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:04:24
+3209516139;000;validar header- no se enviaron todo los parametros- header_controller;post;;04/20/20;01:28:34
+163416703;000;validar token- token invalido- token_model;post;;04/20/20;01:28:34
+341953529;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:28:34
+9580949395;000;validar token- token invalido- token_model;post;;04/20/20;01:32:55
+2911362093;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/20/20;01:32:55
+757873597863;000;validar token- token invalido- token_model;post;;04/20/20;01:32:55
+775678075;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:32:55
+489971678218;000;asignacion de de tienda;;;04/20/20;01:32:55
+674056198518;000;validar token- token invalido- token_model;post;;04/20/20;01:34:37
+563982486;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:34:37
+9101188671;000;asignacion de de tienda;;;04/20/20;01:34:37
+791658843;000;validar token- token invalido- token_model;post;;04/20/20;01:35:01
+46570591259;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:35:01
+051189881;000;validar token- token invalido- token_model;post;;04/20/20;01:36:11
+9546849500;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:36:11

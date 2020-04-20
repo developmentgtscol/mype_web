@@ -24,17 +24,22 @@ class LoginController:
                 if estado_json:
                     rules = {
                     "uid_cliente": [Required],
-                    "tipo_cliente": [Required,In(["ADMIN", "GERENTE", "ADM_TIENDAS", "CLIENTES"])],
+                    "tipo_cliente": [Required,In(["ADMIN", "GERENTE", "ADMIN_TIENDAS", "CLIENTES"])],
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
-                        uid_cliente=request.json['uid_cliente']
-                        tipo_cliente=request.json['tipo_cliente']
-                        estado_login,codigo_model=login_model.validarlogin(uid_cliente,tipo_cliente)
-                        if estado_login:
-                            return {'estado':True,'mensaje':'login exitoso'}
+                        estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
+                        if estado_vacio:
+                            uid_cliente=request.json['uid_cliente']
+                            tipo_cliente=request.json['tipo_cliente']
+                            estado_login,codigo_model=login_model.validarlogin(uid_cliente,tipo_cliente)
+                            if estado_login:
+                                return {'estado':True,'mensaje':'login exitoso'}
+                            else:
+                                return {'estado':False,'codigo':codigo_model}
                         else:
-                            return {'estado':False,'codigo':codigo_model}
+                            return {'estado':False,'codigo':codigo_vacio}
+                        
                         
                     else:
                         codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- login_controller","post",'')

@@ -3,6 +3,7 @@ from mype.view.ejemplo import vista_de_ejemplo
 from mype.view.login_view import login_view
 from mype.view.registro_view import RegistroView
 from mype.view.solicitudes_view import SolicitudesView
+from mype.view.asignar_view import AsignarView
 from mype.setting.conexion import Conexion
 from .config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
@@ -32,14 +33,14 @@ def login():
   else:
         resp = make_response(v)
         resp.headers['server'] = 'SERVER_NAME'
-        return resp      
+        return resp         
 @app.route('/registrar_usuario_gerente/',methods=['POST'])
 def registrar_gerente():
       registro_view=RegistroView()
       respuesta=registro_view.registrar_usuario_admin(request)
       return jsonify(respuesta)
 
-
+@csrf.exempt
 @app.route('/registrar_tienda/',methods=['POST'])
 def registrar_tienda():
       registro_view=RegistroView()
@@ -53,12 +54,24 @@ def registrar_cliente():
       respuesta=registro_view.registrar_cliente(request)
       return jsonify(respuesta)
 
-@csrf.exempt
+
 @app.route('/solicitar_listaadmintiendas/',methods=['POST'])
 def solicitar_lista_admin_tiendas():
       solicitudes_view=SolicitudesView();
       respuesta=solicitudes_view.solicitar_lista_admin_tiendas(request)
       return jsonify(respuesta)
+
+@app.route('/solicitar_listatiendas/',methods=['POST'])
+def solicitar_lista_tiendas():
+      solicitudes_view=SolicitudesView();
+      respuesta=solicitudes_view.solicitar_lista_tiendas(request)
+      return jsonify(respuesta)     
+@csrf.exempt
+@app.route('/asignar_tienda/',methods=['POST'])
+def solicitar_asignar_tienda():
+      asignar_view=AsignarView();
+      respuesta=asignar_view.asignar_tienda(request)
+      return jsonify(respuesta)           
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)

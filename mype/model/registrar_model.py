@@ -28,15 +28,15 @@ class RegistrarModel:
 
     def registrar_tienda(self,datos):
         try:
-            
             datos_guardar = {
                 'uid_user_registra':datos['uid_usuario'],
                 'nombre_sede_tienda':datos['nombre_tienda_registrar'],
-                'ubicacion_tienda':datos['ubicacion_tienda']
+                'ubicacion_tienda':datos['ubicacion_tienda'],
+                'estado_disponibilidad':True,
+                'admin-tienda_asignado':''
                 }
             ref = db.reference()
             ref.child('geoTIENDAS').push(datos_guardar)
-
             return True,''
         except Exception as e:
             print(e)
@@ -59,11 +59,11 @@ class RegistrarModel:
                     'correo_cliente':datos['correo_cliente'],
                     }
                 ref = db.reference()
-                ref.child('geoCIENTES').child(user.uid).set(datos_guardar)
+                ref.child('geoCLIENTES').child(user.uid).set(datos_guardar)
 
                 return True,''
             except Exception as e:
                 print(e)
                 generator = Generador()
-                codigo = generator.validarGuardarInformacionError('000','crear cliente','POST','admin')
+                codigo = generator.validarGuardarInformacionError('','crear cliente','','')
                 return False,codigo          

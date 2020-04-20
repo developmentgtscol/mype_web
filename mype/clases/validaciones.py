@@ -14,6 +14,7 @@ class Validaciones:
         if uid == token:
             return True,'' 
         else:
+            print('si')
             codigo = generador.validarGuardarInformacionError("000","validar  token corresponda a uid- token no corresponde a uid- validaciones","post",'')
             return True,codigo       
 
@@ -79,3 +80,13 @@ class Validaciones:
             return False, codigo
         except:
             return True, None       
+    def validar_campos_vacios(self,valores):
+        vueltas=0
+        for index, valor in enumerate(valores):
+            if valores[valor] == "" or valores[valor] == " ":
+                codigo=generador.validarGuardarInformacionError("000","se valida que los valores resivido no sean null -campos null -validaciones","post","undefined")
+                vueltas=vueltas+1
+                return False,codigo
+                
+        if vueltas==0:
+            return True,''          
