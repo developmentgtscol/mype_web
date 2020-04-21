@@ -521,3 +521,39 @@
 815811981472;000;validar email si existe - email si existe - validaciones;post;;04/19/20;09:19:52
 07160587156;000;crear cliente;POST;admin;04/19/20;09:19:52
 >>>>>>> 6f5ac70da68f98d03956531bac412f9fe87a8724
+561211294198;000;crear cliente;POST;admin;04/19/20;09:54:11
+646810634;000;crear cliente;POST;admin;04/19/20;09:54:11
+611848939805;000;crear cliente;POST;admin;04/19/20;09:54:11
+227013816750;000;crear cliente;POST;admin;04/19/20;09:54:11
+207974541;000;crear cliente;POST;admin;04/19/20;09:54:11
+77040070582;000;crear cliente;POST;admin;04/19/20;09:54:11
+598362754;000;crear cliente;POST;admin;04/19/20;09:54:11
+4020458287;000;crear cliente;POST;admin;04/19/20;09:54:11
+231007589;000;validar token- token invalido- token_model;post;;04/19/20;20:52:44
+0394643033;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;20:52:44
+049712082;000;validar token- token invalido- token_model;post;;04/19/20;20:52:44
+05560943071;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;20:52:44
+479035229;000;validar token- token invalido- token_model;post;;04/19/20;20:52:44
+73945790967;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;20:52:44
+040195055373;000;validar token- token invalido- token_model;post;;04/19/20;20:52:44
+737628935137;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;20:52:44
+7392210854;000;validar token- token invalido- token_model;post;;04/19/20;20:52:44
+404997449;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;20:52:44
+119759359;000;validar token- token invalido- token_model;post;;04/19/20;20:52:44
+9235349859;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/19/20;20:52:44
+13944196506;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/20/20;16:38:48
+876524550790;000;validar login adm_tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;19:41:01
+239819695958;000;validar login adm_tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;19:41:01
+122510654;000;validar token- token invalido- token_model;post;;04/20/20;19:41:01
+60770261566;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+3367008488;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+23795869803;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+080832852;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+19182156809;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+511370195;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+1118568211;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+26237406425;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+49182509274;000;validar login admin tienda- usuario no existe o no permitido para este login- login_model;post;;04/20/20;20:58:05
+339447099212;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/20/20;20:58:05
+834268065186;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/20/20;20:58:05
+3196635847;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;04/20/20;20:58:05
