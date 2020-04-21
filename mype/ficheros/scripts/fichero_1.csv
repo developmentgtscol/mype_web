@@ -628,3 +628,20 @@
 46570591259;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:35:01
 051189881;000;validar token- token invalido- token_model;post;;04/20/20;01:36:11
 9546849500;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/20/20;01:36:11
+761005505;000;validar token- token invalido- token_model;post;;04/20/20;23:44:09
+533443214583;000;validar token- token invalido- token_model;post;;04/20/20;23:49:29
+840337468;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/20/20;23:49:29
+7210115481;000;validar token- token invalido- token_model;post;;04/20/20;23:49:29
+112560567006;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/20/20;23:49:29
+537423835025;000;validar token- token invalido- token_model;post;;04/20/20;23:49:29
+428781992;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/20/20;23:49:29
+141111539089;000;validar token- token invalido- token_model;post;;04/20/20;23:49:29
+95925661212;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/20/20;23:49:29
+444110196339;000;validar token- token invalido- token_model;post;;04/21/20;00:01:24
+773875388821;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/21/20;00:01:24
+67976862213;000;validar token- token invalido- token_model;post;;04/21/20;00:02:25
+814953261101;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/21/20;00:02:25
+49072148053;000;validar token- token invalido- token_model;post;;04/21/20;00:02:41
+30605897784;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/21/20;00:02:41
+99940524508;000;validar token- token invalido- token_model;post;;04/21/20;00:03:09
+75802327306;000;validar token- token invalido- token_model;post;;04/21/20;00:03:18

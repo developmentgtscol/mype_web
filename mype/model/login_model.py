@@ -20,7 +20,7 @@ class LoginModel:
                 else:
                     codigo = generador.validarGuardarInformacionError("000","validar login adm_tienda- usuario no existe o no permitido para este login- login_model","post",'')
                     return False,codigo
-            elif tipo_cliente == 'ADM_TIENDAS':
+            elif tipo_cliente == 'ADMIN_TIENDAS':
                 datos = db.reference('geo'+tipo_cliente).child(uid).get()
                 if datos != None:
                         return True,''
@@ -28,7 +28,8 @@ class LoginModel:
                     codigo = generador.validarGuardarInformacionError("000","validar login admin tienda- usuario no existe o no permitido para este login- login_model","post",'')
                     return False,codigo
             elif tipo_cliente == 'CLIENTES':
-                datos = db.reference('geoCIENTES').child(uid).get()
+                datos = db.reference('geoCLIENTES').child(uid).get()
+                print('ad')
                 if datos != None:
                         return True,''
                 else:
@@ -36,7 +37,6 @@ class LoginModel:
                     return False,codigo
             
         except Exception as e :
-            print(e)
             codigo = generador.validarGuardarInformacionError("000","validar login- ocurrio un error- login_model","post",'')
             return False,codigo
         

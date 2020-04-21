@@ -18,7 +18,7 @@ class RegistrarController:
                 estado_json,codigo_json=validaciones.validar_json(request)
                 if estado_json:
                     rules = {
-                    "uid_usuario": [Required],
+                    "uid_usuario":[Required],
                     "nombre_usuario_registrar": [Required],
                     "apellido_usuario_registrar":[Required],
                     "telefono_usuario_registrar":[Required],
