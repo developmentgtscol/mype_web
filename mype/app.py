@@ -3,6 +3,7 @@ from mype.view.ejemplo import vista_de_ejemplo
 from mype.view.login_view import login_view
 from mype.view.registro_view import RegistroView
 from mype.view.solicitudes_view import SolicitudesView
+from mype.view.producto_view import ProductoView
 from mype.view.asignar_view import AsignarView
 from mype.setting.conexion import Conexion
 from .config import Config
@@ -70,7 +71,14 @@ def solicitar_lista_tiendas():
 def solicitar_asignar_tienda():
       asignar_view=AsignarView();
       respuesta=asignar_view.asignar_tienda(request)
-      return jsonify(respuesta)           
+      return jsonify(respuesta)    
+
+@csrf.exempt
+@app.route('/registrar_producto/',methods=['POST'])
+def registrar_producto():
+      producto_view=ProductoView();
+      respuesta=producto_view.registrar_producto(request)
+      return jsonify(respuesta)  
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)
