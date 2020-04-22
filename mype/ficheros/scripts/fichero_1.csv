@@ -695,3 +695,15 @@
 99940524508;000;validar token- token invalido- token_model;post;;04/21/20;00:03:09
 75802327306;000;validar token- token invalido- token_model;post;;04/21/20;00:03:18
 >>>>>>> 34929e1f21cc8f36a12565fee001bf34981dd414
+499357933;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/21/20;07:32:30
+0453605038;000;validar token- token invalido- token_model;post;;04/21/20;07:49:22
+91037307573;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;07:49:22
+88047610469;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;07:49:22
+96858978938;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/21/20;10:39:16
+6071256949;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;04/21/20;10:39:16
+3412555015;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;10:39:16
+495850969;000;se valida que los valores resivido no sean null -campos null -validaciones;post;undefined;04/21/20;12:10:33
+9591447718;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;10:26:26
+625969312783;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;10:26:26
+33741835488;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;10:26:26
+411862242616;000;validar token- token invalido- token_model;post;;04/22/20;12:51:33

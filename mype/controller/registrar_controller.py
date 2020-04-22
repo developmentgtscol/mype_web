@@ -31,7 +31,7 @@ class RegistrarController:
                         estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
                         if estado_vacio:
                             uid_usuario=request.json['uid_usuario']
-                            estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,token)
+                            estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,codigo_token)
                             if estado_uid_token: 
                                 correo_usuario=request.json['correo_usuario_registrar']
                                 telefono_usuario=request.json['telefono_usuario_registrar']
@@ -95,7 +95,7 @@ class RegistrarController:
                         estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
                         if estado_vacio:
                             uid_usuario=request.json['uid_usuario']
-                            estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,token)
+                            estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,codigo_token)
                             if estado_uid_token:
                                 estado_permisoadmingerente,codigo_permisoadmingerente=validaciones.validar_tipo_admin_gerente(uid_usuario) 
                                 if estado_permisoadmingerente:
