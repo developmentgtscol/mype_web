@@ -12,16 +12,16 @@ class SolicitudesModel:
             elif tipo == 'LISTA_TIENDAS':
                 datos=ref.child('geoTIENDAS').get()
                 if datos!=None:
-                    lista_k = []
-                    lista_v = []
+                    dato = []
                     for k, v in datos.items():
-                        lista_k.append(k)
-                        lista_v.append(v)
+                        tienda = {
+                            'key': k,
+                            'nombre': v['nombre_sede_tienda'],
+                            'direccion': v['ubicacion_tienda'],
+                            'estado': v['estado_disponibilidad']
+                        }
+                        dato.append(tienda)
 
-                    dato = {
-                        'keys': lista_k,
-                        'valores': lista_v
-                    }
 
                     return True, dato
             else:
