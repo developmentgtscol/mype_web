@@ -645,3 +645,132 @@
 30605897784;000;validar login clientes- usuario no existe o no permitido para este login- login_model;post;;04/21/20;00:02:41
 99940524508;000;validar token- token invalido- token_model;post;;04/21/20;00:03:09
 75802327306;000;validar token- token invalido- token_model;post;;04/21/20;00:03:18
+470872157;000;validar token- token invalido- token_model;post;;04/21/20;00:06:23
+3685056397;000;validar token- token invalido- token_model;post;;04/21/20;00:06:23
+75935451285;000;validar token- token invalido- token_model;post;;04/21/20;00:06:23
+5774250221;000;validar token- token invalido- token_model;post;;04/21/20;00:06:23
+8217448779;000;validar email si existe - email si existe - validaciones;post;;04/21/20;22:45:45
+4751712317;000;validar email si existe - email si existe - validaciones;post;;04/21/20;22:53:18
+0260753612;000;validar token- token invalido- token_model;post;;04/21/20;23:26:29
+5861850310;000;validar token- token invalido- token_model;post;;04/21/20;23:32:19
+379223042428;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:32:19
+15026488537;000;validar token- token invalido- token_model;post;;04/21/20;23:32:19
+46763048480;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:32:19
+420369289;000;validar existencia tienda- el uid de tienda enviado no existe- validaciones;post;;04/21/20;23:32:19
+9868795675;000;validar token- token invalido- token_model;post;;04/21/20;23:55:25
+021461793;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:55:25
+647573319;000;validar token- token invalido- token_model;post;;04/21/20;23:55:25
+27053860440;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:55:25
+876756806;000;validar permiso admin , gerente o admintienda - usuario no posee permiso de admin , gerente- validaciones;post;;04/21/20;23:55:25
+3993514904;000;validar token- token invalido- token_model;post;;04/21/20;23:55:25
+2152034925;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:55:25
+312757153;000;validar token- token invalido- token_model;post;;04/21/20;23:55:25
+008765178;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:55:25
+17565438273;000;validar permiso admin , gerente o admintienda - usuario no posee permiso de admin , gerente- validaciones;post;;04/21/20;23:55:25
+84063152039;000;validar token- token invalido- token_model;post;;04/21/20;23:55:25
+951558072;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:55:25
+058854130;000;validar permiso admin , gerente o admintienda - usuario no posee permiso de admin , gerente- validaciones;post;;04/21/20;23:55:25
+362488486;000;validar token- token invalido- token_model;post;;04/21/20;23:55:25
+0666296964;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/21/20;23:55:25
+5370284052;000;validar token- token invalido- token_model;post;;04/22/20;00:27:25
+07179201084;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:27:25
+283380107;000;validar token- token invalido- token_model;post;;04/22/20;00:28:30
+473389406202;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:28:30
+2585568703;000;validar token- token invalido- token_model;post;;04/22/20;00:38:39
+795500391012;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:38:39
+3668437026;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:38:39
+4387011219;000;validar token- token invalido- token_model;post;;04/22/20;00:39:20
+529569304312;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:39:20
+14124656387;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:39:20
+06344128666;000;validar token- token invalido- token_model;post;;04/22/20;00:41:01
+987683189;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:41:01
+01194999575;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:41:01
+74081967385;000;validar token- token invalido- token_model;post;;04/22/20;00:42:25
+905309277914;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:42:25
+7737511705;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:42:25
+1925057153;000;validar token- token invalido- token_model;post;;04/22/20;00:43:07
+710448699;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:43:07
+787256233;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:43:07
+787511806837;000;validar token- token invalido- token_model;post;;04/22/20;00:43:59
+671634125371;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:43:59
+900396164;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:43:59
+73235497183;000;validar token- token invalido- token_model;post;;04/22/20;00:44:35
+707286350834;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:44:35
+9626316613;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:44:35
+61003295979;000;validar token- token invalido- token_model;post;;04/22/20;00:49:28
+702740924;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:49:28
+680893902669;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:49:28
+4938785750;000;validar token- token invalido- token_model;post;;04/22/20;00:49:28
+348413317117;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:49:28
+51862665176;000;validar token- token invalido- token_model;post;;04/22/20;00:49:28
+52592453848;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:49:28
+03070864597;000;validar token- token invalido- token_model;post;;04/22/20;00:52:31
+5662085504;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:52:31
+129383268007;000;validar token- token invalido- token_model;post;;04/22/20;00:52:55
+682183239335;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:52:55
+55305957694;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;00:52:55
+6716261232;000;validar token- token invalido- token_model;post;;04/22/20;00:52:55
+8072805012;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:52:55
+0916448848;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;00:52:55
+11913680689;000;validar token- token invalido- token_model;post;;04/22/20;00:54:36
+2747391372;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:54:36
+8055796905;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;00:54:36
+8902516604;000;validar token- token invalido- token_model;post;;04/22/20;00:57:11
+6391215145;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:57:11
+46881658702;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;00:57:11
+558182447;000;validar token- token invalido- token_model;post;;04/22/20;00:59:46
+949714903761;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;00:59:46
+253037220;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;00:59:46
+752278428554;000;validar token- token invalido- token_model;post;;04/22/20;01:05:09
+32328000174;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:05:09
+63084638393;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:05:09
+850276984796;000;validar token- token invalido- token_model;post;;04/22/20;01:05:25
+992094562226;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:05:25
+231513991576;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:05:25
+40968463285;000;validar token- token invalido- token_model;post;;04/22/20;01:05:32
+53616900242;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:05:32
+0423731885;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:05:32
+646807815;000;validar token- token invalido- token_model;post;;04/22/20;01:05:32
+578818168;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:05:32
+998163747853;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:05:32
+5935325222;000;validar token- token invalido- token_model;post;;04/22/20;01:05:32
+6183844830;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:05:32
+46933454159;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:05:32
+26487327367;000;validar token- token invalido- token_model;post;;04/22/20;01:06:14
+73629395662;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:06:14
+79203135452;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:06:14
+871734219615;000;validar token- token invalido- token_model;post;;04/22/20;01:07:27
+71178852694;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:07:27
+95152654218;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:07:27
+449109917;000;validar token- token invalido- token_model;post;;04/22/20;01:07:27
+597893037574;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:07:27
+630625859;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:07:27
+243157595;000;validar token- token invalido- token_model;post;;04/22/20;01:07:27
+417753247263;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:07:27
+0431536250;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:07:27
+59503371041;000;validar token- token invalido- token_model;post;;04/22/20;01:08:19
+607785923936;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:08:19
+3773173761;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:08:19
+903161467195;000;validar token- token invalido- token_model;post;;04/22/20;01:08:19
+5230121718;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:08:19
+8529439205;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:08:19
+5563257340;000;validar token- token invalido- token_model;post;;04/22/20;01:09:19
+825540855;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:09:19
+348200096054;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:09:19
+024283595;000;validar token- token invalido- token_model;post;;04/22/20;01:09:19
+288472946796;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:09:19
+660378648955;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:09:19
+391411531;000;validar token- token invalido- token_model;post;;04/22/20;01:12:01
+97106563892;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:12:01
+129114542615;000;validar referencia producto- ocurrio un error- validaciones;post;;04/22/20;01:12:01
+71491818148;000;validar token- token invalido- token_model;post;;04/22/20;01:12:19
+346598304362;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:12:19
+341189738;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:12:19
+402603724;000;validar token- token invalido- token_model;post;;04/22/20;01:12:19
+9810333921;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:12:19
+8494835884;000;validar token- token invalido- token_model;post;;04/22/20;01:12:19
+592217337775;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:12:19
+230129074;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:12:19
+5481714949;000;validar token- token invalido- token_model;post;;04/22/20;01:12:19
+5940467187;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/22/20;01:12:19
+5055080565;000;validar referencia producto- referencia producto existe- validaciones;post;;04/22/20;01:12:19

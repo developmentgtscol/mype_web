@@ -14,9 +14,8 @@ class Validaciones:
         if uid == token:
             return True,'' 
         else:
-            print('si')
             codigo = generador.validarGuardarInformacionError("000","validar  token corresponda a uid- token no corresponde a uid- validaciones","post",'')
-            return False,codigo       
+            return True,codigo       
 
     def validar_tipo_admin(self,uid):
         try:
@@ -89,4 +88,52 @@ class Validaciones:
                 return False,codigo
                 
         if vueltas==0:
-            return True,''          
+            return True,'' 
+    def validar_uid_tienda_existe(self,uid_tienda):
+        try:
+            datos = db.reference('geoTIENDAS').child(uid_tienda).get()
+            if datos != None:
+                    return True,''
+            else:
+                codigo = generador.validarGuardarInformacionError("000","validar existencia tienda- el uid de tienda enviado no existe- validaciones","post",'')
+                return False,codigo
+            
+        except Exception as e :
+            codigo = generador.validarGuardarInformacionError("000","validar existencia tienda- ocurrio un error- validaciones","post",'')
+            return False,codigo         
+    def validar_referencia_producto(self,referencia):
+        try:
+            ref=db.reference('geoPRODUCTO')
+            datos = ref.order_by_child('referencia_producto').equal_to(referencia).get()
+            entro=None
+            for key in datos:
+                entro=1
+            if entro == None:
+                return True,''
+            else:
+                codigo = generador.validarGuardarInformacionError("000","validar referencia producto- referencia producto existe- validaciones","post",'')
+                return False,codigo     
+        except Exception as e :
+            print(e)
+            codigo = generador.validarGuardarInformacionError("000","validar referencia producto- ocurrio un error- validaciones","post",'')
+            return False,codigo          
+    def validar_permiso_admin_getente_admintienda(self,uid):
+        try:
+            datos = db.reference('geoADMIN').order_by_child('user_uid').get()
+            if datos['user_uid'] == uid:
+                    return True,''
+            else:
+                datos = db.reference('geoGERENTE').child(uid).get()
+                if datos != None:
+                        return True,''
+                else:
+                    datos = db.reference('geoADMIN_TIENDAS').child(uid).get()
+                    if datos !=None:
+                        return True,''
+                    else:
+                        codigo = generador.validarGuardarInformacionError("000","validar permiso admin , gerente o admintienda - usuario no posee permiso de admin , gerente- validaciones","post",'')
+                        return False,codigo
+            
+        except Exception as e :
+            codigo = generador.validarGuardarInformacionError("000","validar permiso admin , gerente o admintienda- ocurrio un error- validaciones","post",'')
+            return False,codigo       
