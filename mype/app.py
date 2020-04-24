@@ -54,26 +54,25 @@ def registrar_cliente():
       respuesta=registro_view.registrar_cliente(request)
       return jsonify(respuesta)
 
-@csrf.exempt
+
 @app.route('/solicitar_listaadmintiendas/',methods=['POST'])
 def solicitar_lista_admin_tiendas():
       solicitudes_view=SolicitudesView();
       respuesta=solicitudes_view.solicitar_lista_admin_tiendas(request)
       return jsonify(respuesta)
-@csrf.exempt
+
 @app.route('/solicitar_listatiendas/',methods=['POST'])
 def solicitar_lista_tiendas():
       solicitudes_view=SolicitudesView();
       respuesta=solicitudes_view.solicitar_lista_tiendas(request)
       return jsonify(respuesta)     
-@csrf.exempt
+
 @app.route('/asignar_tienda/',methods=['POST'])
 def solicitar_asignar_tienda():
       asignar_view=AsignarView();
       respuesta=asignar_view.asignar_tienda(request)
       return jsonify(respuesta)    
 
-@csrf.exempt
 @app.route('/registrar_producto/',methods=['POST'])
 def registrar_producto():
       producto_view=ProductoView();
