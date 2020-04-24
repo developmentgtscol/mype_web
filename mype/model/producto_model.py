@@ -17,7 +17,11 @@ class ProductoModel:
             ref.child('geoPRODUCTO').push(datos_guardar)
 
             return True,''
-        except  :
+        except Exception as e :
+            print(e)
             generator = Generador()
             codigo = generator.validarGuardarInformacionError('000','guardar producto','post','')
             return False,codigo
+
+
+             
