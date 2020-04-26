@@ -77,6 +77,13 @@ def solicitar_asignar_tienda():
 def registrar_producto():
       producto_view=ProductoView();
       respuesta=producto_view.registrar_producto(request)
+      return jsonify(respuesta) 
+
+
+@app.route('/solicitar_producto/',methods=['POST'])
+def solicitar_producto():
+      producto_view=ProductoView();
+      respuesta=producto_view.solicitar_producto(request)
       return jsonify(respuesta)  
 # iniciador
 if __name__ == '__main__':

@@ -33,7 +33,7 @@ class SolictudesController:
                                     solicitudes_model=SolicitudesModel()
                                     estado_solictud,codigo_solicitud=solicitudes_model.solicitudes_admin_gerente(request.json,tipo)
                                     if estado_solictud:
-                                        return  {'estado':True,'mensaje':'registro exitoso','datos':codigo_solicitud}
+                                        return  {'estado':True,'datos':codigo_solicitud}
                                     else:
                                         return  {'estado':False,'codigo':codigo_solicitud}
                                 else:

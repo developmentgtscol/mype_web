@@ -67,3 +67,52 @@ class ProductoController:
                 return {'estado':False,'codigo':codigo_token}
         else:
             return {'estado':False,'codigo':codigo_header}
+
+    def solicitar_producto(self,request):
+        estado_header,codigo_header=header_controller.validar_header(request.headers)
+        if estado_header:
+            token=request.headers['Authorization']
+            estado_token,codigo_token=verificartoken.validar_token_fb(token)
+            if estado_token:
+                estado_json,codigo_json=validaciones.validar_json(request)
+                if estado_json:
+                    rules = {
+                    "uid_usuario":[Required],
+                    "uid_tienda":[Required]
+                    }
+                    respuesta=validate(rules, request.json)
+                    if(respuesta[0]):
+                        estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
+                        if estado_vacio:
+                            uid_usuario=request.json['uid_usuario']
+                            estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,codigo_token)
+                            if estado_uid_token:
+                                estado_permiso,codigo_permiso=validaciones.validar_permiso_admin_getente_admintienda(uid_usuario)
+                                if estado_permiso:
+                                    uid_tienda=request.json['uid_tienda']
+                                    estado_validar_tienda,codigo_validar_tienda=validaciones.validar_uid_tienda_existe(uid_tienda)
+                                    if estado_validar_tienda:
+                                        producto_model=ProductoModel();
+                                        estado_solicitar_producto,codigo_solicitar_producto=producto_model.solicitar_producto(uid_tienda)
+                                        if estado_solicitar_producto:
+                                            return {'estado':estado_solicitar_producto,'datos':codigo_solicitar_producto}
+                                        else:
+                                            return {'estado':False,'codigo':codigo_solicitar_producto}
+                                    else:
+                                        return {'estado':False,'codigo':codigo_validar_tienda}
+                                else:
+                                     return {'estado':False,'codigo':codigo_permiso}
+                            else:
+                                return {'estado':False,'codigo':codigo_uid_token}
+                        else:
+                            return {'estado':False,'codigo':codigo_vacio}   
+                    else:
+                        codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller","post",'')
+                        return {'estado':False,'codigo':codigo}
+                else:
+                    return {'estado':False,'codigo':codigo_json}
+            else:
+                return {'estado':False,'codigo':codigo_token}
+        else:
+            return {'estado':False,'codigo':codigo_header}
+
