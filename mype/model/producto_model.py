@@ -27,7 +27,6 @@ class ProductoModel:
         try:
             ref = db.reference()
             datos=ref.child("geoPRODUCTO").order_by_child('uid_tienda_asignada').equal_to(uid_tienda).get()
-            print(len(datos))
             if len(datos)!=0:
                 dato=[]
                 for k,v in datos.items():
@@ -46,10 +45,37 @@ class ProductoModel:
                 codigo = generator.validarGuardarInformacionError('000','solicitar producto - tienda no tiene productos disponibles- productos model','post','')
                 return False,codigo         
         except Exception as e :
-            print(e)
             generator = Generador()
             codigo = generator.validarGuardarInformacionError('000','solicitar producto','post','')
-            return False,codigo     
+            return False,codigo 
+
+    def solicitar_producto_cliente(self):
+        try:
+            ref = db.reference()
+            datos=ref.child("geoPRODUCTO").order_by_child('uid_tienda_asignada').get()
+            if len(datos)!=0:
+                dato=[]
+                for k,v in datos.items():
+                    producto={
+                        'key':k,
+                        'nombre':v['nombre_producto'],
+                        'precio':v['precio_producto'],
+                        'imagen':v['producto_imagen'],
+                        'referencia':v['referencia_producto'],
+                        'tienda':v['uid_tienda_asignada']
+                    }
+                    dato.append(producto)
+
+                return True,dato
+            else:
+                generator = Generador()
+                codigo = generator.validarGuardarInformacionError('000','solicitar producto - tienda no tiene productos disponibles- productos model','post','')
+                return False,codigo         
+        except Exception as e :
+            print(e)
+            generator = Generador()
+            codigo = generator.validarGuardarInformacionError('000','solicitar producto cliente','post','')
+            return False,codigo               
 
 
              

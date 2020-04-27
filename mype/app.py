@@ -85,6 +85,13 @@ def solicitar_producto():
       producto_view=ProductoView();
       respuesta=producto_view.solicitar_producto(request)
       return jsonify(respuesta)  
+
+
+@app.route('/solicitar_producto_cliente/',methods=['POST'])
+def solicitar_producto_cliente():
+      producto_view=ProductoView();
+      respuesta=producto_view.solicitar_producto_cliente(request)
+      return jsonify(respuesta)        
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)

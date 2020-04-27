@@ -1005,3 +1005,22 @@
 0711253398;000;validar token- token invalido- token_model;post;;04/26/20;11:46:59
 47268840247;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;11:46:59
 914136120094;000;validar token- token invalido- token_model;post;;04/26/20;11:47:57
+970055560;000;validar header- no se enviaron todo los parametros- header_controller;post;;04/26/20;20:12:28
+579637585;000;validar token- token invalido- token_model;post;;04/26/20;20:12:28
+211522592514;000;validar token- token invalido- token_model;post;;04/26/20;20:13:42
+235530138;000;validar si lleva json la consulta- no se enviaron json- validaciones;post;;04/26/20;20:13:42
+223179923;000;validar token- token invalido- token_model;post;;04/26/20;20:13:42
+86143169458;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;20:13:42
+4453795340;000;validar token- token invalido- token_model;post;;04/26/20;20:14:54
+082512134;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;20:14:54
+66085893570;000;solicitar producto;post;;04/26/20;20:14:54
+905317497;000;validar token- token invalido- token_model;post;;04/26/20;20:15:15
+784137113714;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;20:15:15
+38519248941;000;solicitar producto cliente;post;;04/26/20;20:15:15
+957483275668;000;validar token- token invalido- token_model;post;;04/26/20;20:15:29
+364304985;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;20:15:29
+4430604349;000;solicitar producto cliente;post;;04/26/20;20:15:29
+601958735;000;validar token- token invalido- token_model;post;;04/26/20;20:15:29
+372749515;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;20:15:29
+956952318;000;validar token- token invalido- token_model;post;;04/26/20;20:40:09
+375032607018;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;04/26/20;20:40:09

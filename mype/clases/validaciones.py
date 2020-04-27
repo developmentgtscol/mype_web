@@ -136,4 +136,16 @@ class Validaciones:
             
         except Exception as e :
             codigo = generador.validarGuardarInformacionError("000","validar permiso admin , gerente o admintienda- ocurrio un error- validaciones","post",'')
-            return False,codigo       
+            return False,codigo  
+
+    def validar_permiso_cliente(self,uid_cliente):
+        try:
+            datos = db.reference('geoCLIENTES').child(uid_cliente).get()
+            if datos != None:
+                    return True,''
+            else:
+                codigo = generador.validarGuardarInformacionError("000","validar permiso cliente- usuario no tiene permiso de cliente- validaciones","post",'')
+                return False,codigo  
+        except :
+            codigo = generador.validarGuardarInformacionError("000","validar permiso cliente- ocurrio un error- validaciones","post",'')
+            return False,codigo             
