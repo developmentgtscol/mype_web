@@ -1,5 +1,6 @@
 from firebase_admin import db
 from mype.ficheros.codigo import Generador
+from wsgiref.simple_server import make_server 
 class ProductoModel:
     def registrar_producto(self,datos):
         try:
@@ -23,10 +24,10 @@ class ProductoModel:
             codigo = generator.validarGuardarInformacionError('000','guardar producto','post','')
             return False,codigo
 
-    def solicitar_producto(self,uid_tienda):
+    def solicitar_producto(self):
         try:
             ref = db.reference()
-            datos=ref.child("geoPRODUCTO").order_by_child('uid_tienda_asignada').equal_to(uid_tienda).get()
+            datos=ref.child("geoPRODUCTO").get()
             if len(datos)!=0:
                 dato=[]
                 for k,v in datos.items():
@@ -37,6 +38,7 @@ class ProductoModel:
                         'imagen':v['producto_imagen'],
                         'referencia':v['referencia_producto']
                     }
+                    
                     dato.append(producto)
 
                 return True,dato

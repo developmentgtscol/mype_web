@@ -5,6 +5,7 @@ from mype.view.registro_view import RegistroView
 from mype.view.solicitudes_view import SolicitudesView
 from mype.view.producto_view import ProductoView
 from mype.view.asignar_view import AsignarView
+from mype.view.pedido_view import PedidoView
 from mype.setting.conexion import Conexion
 from .config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
@@ -86,12 +87,18 @@ def solicitar_producto():
       respuesta=producto_view.solicitar_producto(request)
       return jsonify(respuesta)  
 
-
 @app.route('/solicitar_producto_cliente/',methods=['POST'])
 def solicitar_producto_cliente():
       producto_view=ProductoView();
       respuesta=producto_view.solicitar_producto_cliente(request)
-      return jsonify(respuesta)        
+      return jsonify(respuesta)     
+
+@csrf.exempt
+@app.route('/registrar_pedido/',methods=['POST'])
+def registrar_pedido():
+      pedido_view=PedidoView()
+      respuesta=pedido_view.registrar_pedido(request)
+      return jsonify(respuesta)    
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)

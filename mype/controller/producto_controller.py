@@ -23,7 +23,6 @@ class ProductoController:
                     "referencia_producto":[Required],
                     "precio_producto":[Required],
                     "cantidad_producto":[Required],
-                    "uid_tienda_asignada":[Required],
                     "producto_imagen":[Required],
                     "descripción":[Required]
                     }
@@ -36,9 +35,6 @@ class ProductoController:
                             if estado_uid_token:
                                 estado_permiso,codigo_permiso=validaciones.validar_permiso_admin_getente_admintienda(uid_usuario)
                                 if estado_permiso:
-                                    uid_tienda_asignada=request.json['uid_tienda_asignada']
-                                    estado_validar_tienda,codigo_validar_tienda=validaciones.validar_uid_tienda_existe(uid_tienda_asignada)
-                                    if estado_validar_tienda:
                                         referencia_producto=request.json['referencia_producto']
                                         estado_referencia,codigo_referencia=validaciones.validar_referencia_producto(referencia_producto)
                                         if estado_referencia:
@@ -50,8 +46,6 @@ class ProductoController:
                                                 return {'estado':False,'codigo':codigo_guardar_producto}
                                         else:
                                             return {'estado':False,'codigo':codigo_referencia}
-                                    else:
-                                        return {'estado':False,'codigo':codigo_validar_tienda}
                                 else:
                                      return {'estado':False,'codigo':codigo_permiso}
                             else:
@@ -59,7 +53,7 @@ class ProductoController:
                         else:
                             return {'estado':False,'codigo':codigo_vacio}   
                     else:
-                        codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller","post",'')
+                        codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- producto_controller","post",'')
                         return {'estado':False,'codigo':codigo}
                 else:
                     return {'estado':False,'codigo':codigo_json}
@@ -78,7 +72,6 @@ class ProductoController:
                 if estado_json:
                     rules = {
                     "uid_usuario":[Required],
-                    "uid_tienda":[Required]
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
@@ -89,17 +82,12 @@ class ProductoController:
                             if estado_uid_token:
                                 estado_permiso,codigo_permiso=validaciones.validar_permiso_admin_getente_admintienda(uid_usuario)
                                 if estado_permiso:
-                                    uid_tienda=request.json['uid_tienda']
-                                    estado_validar_tienda,codigo_validar_tienda=validaciones.validar_uid_tienda_existe(uid_tienda)
-                                    if estado_validar_tienda:
                                         producto_model=ProductoModel();
-                                        estado_solicitar_producto,codigo_solicitar_producto=producto_model.solicitar_producto(uid_tienda)
+                                        estado_solicitar_producto,codigo_solicitar_producto=producto_model.solicitar_producto()
                                         if estado_solicitar_producto:
                                             return {'estado':estado_solicitar_producto,'datos':codigo_solicitar_producto}
                                         else:
                                             return {'estado':False,'codigo':codigo_solicitar_producto}
-                                    else:
-                                        return {'estado':False,'codigo':codigo_validar_tienda}
                                 else:
                                      return {'estado':False,'codigo':codigo_permiso}
                             else:
@@ -149,7 +137,7 @@ class ProductoController:
                         else:
                             return {'estado':False,'codigo':codigo_vacio}   
                     else:
-                        codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller","post",'')
+                        codigo = generador.validarGuardarInformacionError("000","validar si trae los parametros necesario- no se enviaron los parametros- producto_controller","post",'')
                         return {'estado':False,'codigo':codigo}
                 else:
                     return {'estado':False,'codigo':codigo_json}
