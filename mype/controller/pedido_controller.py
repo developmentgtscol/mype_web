@@ -25,8 +25,7 @@ class PedidoController:
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
-                        print('3')
-                        print(request.json['datos_pedidos'])
+                        pedido=[{"nombre": "Los frutos", "precio": "14523", "cantidad": 1, "key": "-M5xEFjOjUlFivUuZi-c", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fberries-1546125_1920.jpg?alt=media&token=e9576726-398c-44e9-8f61-29083658b5cb"}, {"nombre": "Piña", "precio": "52312", "cantidad": 1, "key": "-M5xEsEuyiYtRRGGyAjy", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fraspberries-1426859_1920.jpg?alt=media&token=f8cea9fa-3b1a-47ab-a929-5af0295b25a8"}]
                         estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
                         if estado_vacio:
                             uid_cliente=request.json['uid_cliente']
@@ -35,7 +34,7 @@ class PedidoController:
                                 estado_permiso,codigo_permiso=validaciones.validar_permiso_cliente(uid_cliente)
                                 if estado_permiso:
                                     pedido_model=PedidoModel();
-                                    estado_solicitar_producto,codigo_solicitar_producto=pedido_model.registrar_pedido(request)
+                                    estado_solicitar_producto,codigo_solicitar_producto=pedido_model.registrar_pedido(request.json)
                                     if estado_solicitar_producto:
                                         return {'estado':estado_solicitar_producto,'datos':codigo_solicitar_producto}
                                     else:

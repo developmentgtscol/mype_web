@@ -93,7 +93,7 @@ def solicitar_producto_cliente():
       respuesta=producto_view.solicitar_producto_cliente(request)
       return jsonify(respuesta)     
 
-@csrf.exempt
+
 @app.route('/registrar_pedido/',methods=['POST'])
 def registrar_pedido():
       pedido_view=PedidoView()
