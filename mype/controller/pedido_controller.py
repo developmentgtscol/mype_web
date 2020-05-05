@@ -4,6 +4,7 @@ from mype.model.token_model import Token
 from mype.clases.validaciones import Validaciones
 from mype.model.pedido_model import PedidoModel
 from ..ficheros.codigo import Generador
+from mype.clases.zona_influencia import ZonaInfluencia
 header_controller=HeaderController()
 verificartoken=Token()
 validaciones=Validaciones();
@@ -19,13 +20,16 @@ class PedidoController:
                 estado_json,codigo_json=validaciones.validar_json(request)
                 if estado_json:
                     print('2')
+                    request.json['datos_pedidos']=[{"nombre": "Los frutos", "precio": "14523", "cantidad": 1, "key": "-M5xEFjOjUlFivUuZi-c", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fberries-1546125_1920.jpg?alt=media&token=e9576726-398c-44e9-8f61-29083658b5cb"}, {"nombre": "Piña", "precio": "52312", "cantidad": 1, "key": "-M5xEsEuyiYtRRGGyAjy", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fraspberries-1426859_1920.jpg?alt=media&token=f8cea9fa-3b1a-47ab-a929-5af0295b25a8"}]
+
                     rules = {
                     "uid_cliente":[Required],
-                    "datos_pedidos":[Required]
+                    "datos_pedidos":[Required],
+                    "latitud_cliente":[Required],
+                    "longitud_cliente":[Required]
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
-                        pedido=[{"nombre": "Los frutos", "precio": "14523", "cantidad": 1, "key": "-M5xEFjOjUlFivUuZi-c", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fberries-1546125_1920.jpg?alt=media&token=e9576726-398c-44e9-8f61-29083658b5cb"}, {"nombre": "Piña", "precio": "52312", "cantidad": 1, "key": "-M5xEsEuyiYtRRGGyAjy", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fraspberries-1426859_1920.jpg?alt=media&token=f8cea9fa-3b1a-47ab-a929-5af0295b25a8"}]
                         estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
                         if estado_vacio:
                             uid_cliente=request.json['uid_cliente']
@@ -33,12 +37,23 @@ class PedidoController:
                             if estado_uid_token:
                                 estado_permiso,codigo_permiso=validaciones.validar_permiso_cliente(uid_cliente)
                                 if estado_permiso:
-                                    pedido_model=PedidoModel();
-                                    estado_solicitar_producto,codigo_solicitar_producto=pedido_model.registrar_pedido(request.json)
-                                    if estado_solicitar_producto:
-                                        return {'estado':estado_solicitar_producto,'datos':codigo_solicitar_producto}
+                                    latitud_cliente=request.json['latitud_cliente']
+                                    longitud_cliente=request.json['longitud_cliente']
+                                    estado_cordenadas,codigo_cordenadas=validaciones.validar_cordenadas(latitud_cliente,longitud_cliente)
+                                    if estado_cordenadas:
+                                        zona_influencia=ZonaInfluencia()
+                                        estado_zona_influencia,codigo_zona_influencia=zona_influencia.solicitar_zona_Influencia(latitud_cliente,longitud_cliente)
+                                        if estado_zona_influencia:
+                                            pedido_model=PedidoModel();
+                                            estado_registrar_pedido,codigo_registrar_pedido=pedido_model.registrar_pedido(request.json,codigo_zona_influencia)
+                                            if estado_registrar_pedido:
+                                                return {'estado':estado_registrar_pedido,'datos':codigo_registrar_pedido}
+                                            else:
+                                                return {'estado':False,'codigo':codigo_registrar_pedido}
+                                        else:
+                                            return {'estado':False,'codigo':codigo_zona_influencia}
                                     else:
-                                        return {'estado':False,'codigo':codigo_solicitar_producto}
+                                        return {'estado':False,'codigo':codigo_cordenadas}
                                 else:
                                      return {'estado':False,'codigo':codigo_permiso}
                             else:

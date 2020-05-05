@@ -1,5 +1,6 @@
 from ..ficheros.codigo import Generador
 from firebase_admin import db,auth
+import re
 generador = Generador()
 class Validaciones:
     def validar_json(self,request):
@@ -148,4 +149,23 @@ class Validaciones:
                 return False,codigo  
         except :
             codigo = generador.validarGuardarInformacionError("000","validar permiso cliente- ocurrio un error- validaciones","post",'')
-            return False,codigo             
+            return False,codigo
+    def validar_cordenadas(self,latitud,longitud):
+        try:
+                return True,''
+        except Exception as e :
+            print(e)
+            codigo = generador.validarGuardarInformacionError("000","validar cordenadas validas2- cordenas erronea- validaciones","post",'')
+            return False,codigo
+    def validar_zona_influencia(self,zona):
+        try:
+            datos = db.reference('geoTIENDAS').order_by_child('zona_influencia').equal_to(zona).get()
+            if len(datos)==0:
+                    return True,''
+            else:
+                codigo = generador.validarGuardarInformacionError("000","validar si zona de influencia ocupada - zona influencia ocupada- validaciones","post",'')
+                return False,codigo              
+        except Exception as e :
+            print(e)
+            codigo = generador.validarGuardarInformacionError("000","validar si zona de influencia ocupada -ocurrio un error servidor- validaciones","post",'')
+            return False,codigo                             

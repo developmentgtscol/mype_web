@@ -31,7 +31,9 @@ class RegistrarModel:
             datos_guardar = {
                 'uid_user_registra':datos['uid_usuario'],
                 'nombre_sede_tienda':datos['nombre_tienda_registrar'],
-                'ubicacion_tienda':datos['ubicacion_tienda'],
+                'latitud_tienda':datos['latitud_tienda'],
+                'longitud_tienda':datos['longitud_tienda'],
+                'zona_influencia':datos['zona_influencia'],
                 'estado_disponibilidad':True,
                 'admin-tienda_asignado':''
                 }

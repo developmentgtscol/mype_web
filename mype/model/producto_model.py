@@ -38,7 +38,6 @@ class ProductoModel:
                         'imagen':v['producto_imagen'],
                         'referencia':v['referencia_producto']
                     }
-                    
                     dato.append(producto)
 
                 return True,dato
@@ -67,7 +66,8 @@ class ProductoModel:
                         'tienda':v['uid_tienda_asignada']
                     }
                     dato.append(producto)
-
+                zona1=[(10.99474,-74.78343),(11.00338,-74.78591),(11.00982,-74.79145),(11.01434,-74.79428),(11.00726,-74.79969),(11.00225,-74.80638),(10.99786,-74.80295),(10.99891,-74.80162),(10.99297,-74.79149)]
+                zona2=[(11.01434,-74.79428),(11.02578,-74.80297),(11.02073,-74.80709),(11.0139,-74.80915),(11.0086,-74.81413),(11.00514,-74.81121),(11.00225,-74.80638),(11.00726,-74.79969)]
                 return True,dato
             else:
                 generator = Generador()

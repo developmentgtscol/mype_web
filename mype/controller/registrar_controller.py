@@ -88,7 +88,9 @@ class RegistrarController:
                     rules = {
                     "uid_usuario": [Required],
                     "nombre_tienda_registrar": [Required],
-                    "ubicacion_tienda":[Required],
+                    "latitud_tienda":[Required],
+                    "longitud_tienda":[Required],
+                    "zona_influencia":[Required,In([1,2,3,4,5])],
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):
@@ -99,12 +101,23 @@ class RegistrarController:
                             if estado_uid_token:
                                 estado_permisoadmingerente,codigo_permisoadmingerente=validaciones.validar_tipo_admin_gerente(uid_usuario) 
                                 if estado_permisoadmingerente:
-                                    registrar_model=RegistrarModel()
-                                    estado_registrar,codigo_registrar=registrar_model.registrar_tienda(request.json)
-                                    if estado_registrar:
-                                        return  {'estado':True,'mensaje':'registro exitoso'}
+                                    latitud_tienda=request.json['latitud_tienda']
+                                    longitud_tienda=request.json['longitud_tienda']
+                                    estado_cordenadas,codigo_cordenadas=validaciones.validar_cordenadas(latitud_tienda,longitud_tienda)
+                                    if estado_cordenadas:
+                                        zona_influencia=request.json['zona_influencia']
+                                        estado_zona_influencia,codigo_zona_influencia=validaciones.validar_zona_influencia(zona_influencia)
+                                        if estado_zona_influencia:
+                                            registrar_model=RegistrarModel()
+                                            estado_registrar,codigo_registrar=registrar_model.registrar_tienda(request.json)
+                                            if estado_registrar:
+                                                return  {'estado':True,'mensaje':'registro exitoso'}
+                                            else:
+                                                return  {'estado':False,'codigo':codigo_registrar}
+                                        else:
+                                            return {'estado':False,'codigo':codigo_zona_influencia}   
                                     else:
-                                        return  {'estado':False,'codigo':codigo_registrar}
+                                        return {'estado':False,'codigo':codigo_cordenadas}        
                                 else:
                                     return {'estado':False,'codigo':codigo_permisoadmingerente}
                             else:
