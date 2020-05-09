@@ -1,4 +1,4 @@
-from mype.controller.solicitudes_controller import SolictudesController
+from controller.solicitudes_controller import SolictudesController
 solicitudes=SolictudesController();
 class SolicitudesView:
     def solicitar_lista_admin_tiendas(self,request):

@@ -1,4 +1,4 @@
-from mype.controller.registrar_controller import RegistrarController
+from controller.registrar_controller import RegistrarController
 registrar=RegistrarController()
 class RegistroView:
     def registrar_usuario_admin(self,request):

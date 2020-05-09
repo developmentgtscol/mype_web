@@ -1,10 +1,10 @@
-from mype.controller.header_controller import HeaderController
+from controller.header_controller import HeaderController
 from validator import Required, Equals,  validate,In
 import re
-from mype.model.token_model import Token
-from mype.model.login_model import LoginModel
-from mype.clases.validaciones import Validaciones
-from ..ficheros.codigo import Generador
+from model.token_model import Token
+from model.login_model import LoginModel
+from clases.validaciones import Validaciones
+from ficheros.codigo import Generador
 
 generador = Generador()
 class LoginController:
@@ -33,7 +33,10 @@ class LoginController:
                             tipo_cliente=request.json['tipo_cliente']
                             estado_login,codigo_model=login_model.validarlogin(uid_cliente,tipo_cliente)
                             if estado_login:
-                                return {'estado':True,'mensaje':'login exitoso'}
+                                if tipo_cliente == 'ADMIN_TIENDAS':
+                                     return {'estado':True,'mensaje':'login exitoso','uid_tienda':codigo_model}
+                                else:
+                                     return {'estado':True,'mensaje':'login exitoso'}
                             else:
                                 return {'estado':False,'codigo':codigo_model}
                         else:

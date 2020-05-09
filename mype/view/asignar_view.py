@@ -1,4 +1,4 @@
-from mype.controller.asignar_controller import AsignarController
+from controller.asignar_controller import AsignarController
 asignar_controller=AsignarController()
 class AsignarView:
     def asignar_tienda(self,request):

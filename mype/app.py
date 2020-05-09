@@ -1,13 +1,12 @@
 from flask import Flask,request,jsonify, make_response
-from mype.view.ejemplo import vista_de_ejemplo
-from mype.view.login_view import login_view
-from mype.view.registro_view import RegistroView
-from mype.view.solicitudes_view import SolicitudesView
-from mype.view.producto_view import ProductoView
-from mype.view.asignar_view import AsignarView
-from mype.view.pedido_view import PedidoView
-from mype.setting.conexion import Conexion
-from .config import Config
+from view.login_view import login_view
+from view.registro_view import RegistroView
+from view.solicitudes_view import SolicitudesView
+from view.producto_view import ProductoView
+from view.asignar_view import AsignarView
+from view.pedido_view import PedidoView
+from setting.conexion import Conexion
+from config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
 from flask_cors import CORS,cross_origin
 
@@ -55,12 +54,12 @@ def registrar_cliente():
       respuesta=registro_view.registrar_cliente(request)
       return jsonify(respuesta)
 
-
 @app.route('/solicitar_listaadmintiendas/',methods=['POST'])
 def solicitar_lista_admin_tiendas():
       solicitudes_view=SolicitudesView();
       respuesta=solicitudes_view.solicitar_lista_admin_tiendas(request)
       return jsonify(respuesta)
+@csrf.exempt
 
 @app.route('/solicitar_listatiendas/',methods=['POST'])
 def solicitar_lista_tiendas():

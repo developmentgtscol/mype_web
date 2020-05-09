@@ -1,9 +1,9 @@
-from mype.controller.header_controller import HeaderController
+from controller.header_controller import HeaderController
 from validator import Required, Equals,  validate,In,Pattern
-from mype.model.token_model import Token
-from mype.clases.validaciones import Validaciones
-from ..ficheros.codigo import Generador
-from mype.model.registrar_model import RegistrarModel
+from model.token_model import Token
+from clases.validaciones import Validaciones
+from ficheros.codigo import Generador
+from model.registrar_model import RegistrarModel
 header_controller=HeaderController()
 verificartoken=Token()
 validaciones=Validaciones();

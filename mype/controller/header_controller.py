@@ -1,5 +1,5 @@
 from validator import Required, Equals,  validate
-from ..ficheros.codigo import Generador
+from ficheros.codigo import Generador
 generador = Generador()
 class HeaderController:
     def validar_header(self,header):

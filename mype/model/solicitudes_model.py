@@ -1,5 +1,5 @@
 from firebase_admin import db
-from mype.ficheros.codigo import Generador
+from ficheros.codigo import Generador
 class SolicitudesModel:
     def solicitudes_admin_gerente(self,uid,tipo):
         try:
@@ -7,7 +7,6 @@ class SolicitudesModel:
             if tipo =='LISTA_ADMIN_TIENDAS':
                 datos=ref.child('geoADMIN_TIENDAS').get()
                 if datos!=None:
-                    print(datos.values())
                     return True,datos
             elif tipo == 'LISTA_TIENDAS':
                 datos=ref.child('geoTIENDAS').get()
@@ -17,8 +16,10 @@ class SolicitudesModel:
                         tienda = {
                             'key': k,
                             'nombre': v['nombre_sede_tienda'],
-                            'direccion': v['ubicacion_tienda'],
-                            'estado': v['estado_disponibilidad']
+                            'latitud': v['latitud_tienda'],
+                            'logintud': v['longitud_tienda'],
+                            'estado': v['estado_disponibilidad'],
+                            'admin_de_tienda':v['admin-tienda_asignado'],
                         }
                         dato.append(tienda)
 

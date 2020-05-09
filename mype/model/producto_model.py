@@ -1,6 +1,5 @@
 from firebase_admin import db
-from mype.ficheros.codigo import Generador
-from wsgiref.simple_server import make_server 
+from  ficheros.codigo import Generador
 class ProductoModel:
     def registrar_producto(self,datos):
         try:

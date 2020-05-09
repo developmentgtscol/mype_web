@@ -1,7 +1,7 @@
 from firebase_admin import db
 from datetime import date
 import time
-from mype.ficheros.codigo import Generador
+from ficheros.codigo import Generador
 
 class PedidoModel:
     def registrar_pedido(self,datos,uid_tienda):

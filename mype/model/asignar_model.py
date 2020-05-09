@@ -1,5 +1,5 @@
 from firebase_admin import db
-from mype.ficheros.codigo import Generador
+from ficheros.codigo import Generador
 class AsignarModel:
     def asignar_tienda(self,datos):
         try:

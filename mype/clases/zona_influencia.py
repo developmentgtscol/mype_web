@@ -1,4 +1,4 @@
-from ..ficheros.codigo import Generador
+from ficheros.codigo import Generador
 from firebase_admin import db
 generador = Generador()
 class ZonaInfluencia:

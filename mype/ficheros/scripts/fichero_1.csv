@@ -31,3 +31,34 @@
 434439465476;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/05/20;00:47:28
 529092916753;000;validar token- token invalido- token_model;post;;05/05/20;00:48:02
 255192717278;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/05/20;00:48:02
+24671522037;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/07/20;12:58:50
+963515823511;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/07/20;13:40:10
+706008354687;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/07/20;13:58:23
+968544748504;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/07/20;14:06:23
+396497156;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/07/20;15:32:19
+9496314455;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/08/20;02:00:54
+148725542118;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/08/20;20:07:54
+887520869;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/08/20;20:07:54
+267163348859;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/08/20;20:24:03
+403145536;000;validar header- no se enviaron todo los parametros- header_controller;post;;05/08/20;20:24:03
+192665175;000;validar token- token invalido- token_model;post;;05/08/20;20:24:03
+9756479162;000;validar token- token invalido- token_model;post;;05/08/20;20:25:19
+29427858879;000;validar login- ocurrio un error- login_model;post;;05/08/20;20:25:19
+19017644463;000;validar token- token invalido- token_model;post;;05/08/20;20:25:19
+481208364;000;validar login- ocurrio un error- login_model;post;;05/08/20;20:25:19
+60069649110;000;validar token- token invalido- token_model;post;;05/08/20;20:25:54
+2601945735;000;validar login- ocurrio un error- login_model;post;;05/08/20;20:25:54
+987956585521;000;validar token- token invalido- token_model;post;;05/08/20;20:26:13
+0555495309;000;validar token- token invalido- token_model;post;;05/08/20;20:26:13
+632125116;000;validar token- token invalido- token_model;post;;05/08/20;20:28:33
+431647977821;000;validar si trae los parametros necesario- no se enviaron los parametros- registrar_controller;post;;05/08/20;20:28:33
+002934278331;000;validar token- token invalido- token_model;post;;05/08/20;20:28:33
+314867108;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/08/20;20:28:33
+51334135433;000;validar permiso admin o gerente - usuario no posee permiso de admin o gerente- validaciones;post;;05/08/20;20:28:33
+9601957534;000;validar token- token invalido- token_model;post;;05/08/20;20:28:33
+513444610;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/08/20;20:28:33
+019393690;000;validar token- token invalido- token_model;post;;05/08/20;20:56:33
+83651370356;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/08/20;20:56:33
+4050328357;000;solicitudes admin- gerente;;;05/08/20;20:56:33
+68871225928;000;validar token- token invalido- token_model;post;;05/08/20;21:00:07
+85840098038;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/08/20;21:00:07

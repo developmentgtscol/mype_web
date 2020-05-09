@@ -1,5 +1,5 @@
 from firebase_admin import db, auth
-from mype.ficheros.codigo import Generador
+from ficheros.codigo import Generador
 class RegistrarModel:
     def registrar_usuario_cliente(self,datos,ruta):
         try:
