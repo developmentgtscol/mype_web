@@ -59,7 +59,6 @@ def solicitar_lista_admin_tiendas():
       solicitudes_view=SolicitudesView();
       respuesta=solicitudes_view.solicitar_lista_admin_tiendas(request)
       return jsonify(respuesta)
-@csrf.exempt
 
 @app.route('/solicitar_listatiendas/',methods=['POST'])
 def solicitar_lista_tiendas():
