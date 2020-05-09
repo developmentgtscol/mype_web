@@ -96,7 +96,20 @@ def solicitar_producto_cliente():
 def registrar_pedido():
       pedido_view=PedidoView()
       respuesta=pedido_view.registrar_pedido(request)
-      return jsonify(respuesta)    
+      return jsonify(respuesta)
+
+
+@app.route('/solicitar_pedidos_tienda/',methods=['POST'])
+def solicitar_pedidos_tienda():
+      pedido_view=PedidoView()
+      respuesta=pedido_view.solicitar_pedido_tienda(request)
+      return jsonify(respuesta)
+
+@app.route('/solicitar_pedidos_cliente/',methods=['POST'])
+def solicitar_pedidos_cliente():
+      pedido_view=PedidoView()
+      respuesta=pedido_view.solicitar_pedido_cliente(request)
+      return jsonify(respuesta)                        
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)

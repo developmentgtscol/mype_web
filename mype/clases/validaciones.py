@@ -118,7 +118,7 @@ class Validaciones:
             print(e)
             codigo = generador.validarGuardarInformacionError("000","validar referencia producto- ocurrio un error- validaciones","post",'')
             return False,codigo          
-    def validar_permiso_admin_getente_admintienda(self,uid):
+    def validar_permiso_admin_gerente_admintienda(self,uid):
         try:
             datos = db.reference('geoADMIN').order_by_child('user_uid').get()
             if datos['user_uid'] == uid:
