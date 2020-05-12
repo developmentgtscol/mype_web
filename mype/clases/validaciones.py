@@ -137,7 +137,25 @@ class Validaciones:
             
         except Exception as e :
             codigo = generador.validarGuardarInformacionError("000","validar permiso admin , gerente o admintienda- ocurrio un error- validaciones","post",'')
-            return False,codigo  
+            return False,codigo
+
+
+    def validar_permiso_admin_gerente(self,uid):
+        try:
+            datos = db.reference('geoADMIN').order_by_child('user_uid').get()
+            if datos['user_uid'] == uid:
+                    return True,''
+            else:
+                datos = db.reference('geoGERENTE').child(uid).get()
+                if datos != None:
+                        return True,''
+                else:
+                    codigo = generador.validarGuardarInformacionError("000","validar permiso admin o gerente - usuario no posee permiso de admin , gerente- validaciones","post",'')
+                    return False,codigo
+            
+        except Exception as e :
+            codigo = generador.validarGuardarInformacionError("000","validar permiso admin , gerente o admintienda- ocurrio un error- validaciones","post",'')
+            return False,codigo          
 
     def validar_permiso_cliente(self,uid_cliente):
         try:

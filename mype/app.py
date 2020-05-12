@@ -109,7 +109,14 @@ def solicitar_pedidos_tienda():
 def solicitar_pedidos_cliente():
       pedido_view=PedidoView()
       respuesta=pedido_view.solicitar_pedido_cliente(request)
-      return jsonify(respuesta)                        
+      return jsonify(respuesta)
+
+
+@app.route('/solicitar_pedido/',methods=['POST'])
+def solicitar_pedidos():
+      pedido_view=PedidoView()
+      respuesta=pedido_view.solicitar_pedido(request)
+      return jsonify(respuesta)       
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)

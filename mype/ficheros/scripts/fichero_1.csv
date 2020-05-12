@@ -124,3 +124,16 @@
 00651354506;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/09/20;02:55:50
 0195760980;000;validar token- token invalido- token_model;post;;05/09/20;02:55:50
 48900840428;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/09/20;02:55:50
+9350261854;000;validar token- token invalido- token_model;post;;05/09/20;12:33:18
+83121016139;000;validar si lleva json la consulta- no se enviaron json- validaciones;post;;05/09/20;12:33:18
+633967880;000;validar si trae los parametros necesario- no se enviaron los parametros- login_controller;post;;05/09/20;12:33:18
+3084979385;000;validar token- token invalido- token_model;post;;05/12/20;02:24:54
+767217750;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/12/20;02:24:54
+3775335300;000;validar token- token invalido- token_model;post;;05/12/20;02:24:54
+762566242016;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/12/20;02:24:54
+76435104444;000;validar permiso admin , gerente o admintienda - usuario no posee permiso de admin , gerente- validaciones;post;;05/12/20;02:24:54
+4856506617;000;validar token- token invalido- token_model;post;;05/12/20;02:26:18
+6196955803;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/12/20;02:26:18
+8413749241;000;validar permiso admin o gerente - usuario no posee permiso de admin , gerente- validaciones;post;;05/12/20;02:26:18
+565825329611;000;validar token- token invalido- token_model;post;;05/12/20;02:26:18
+915512963;000;validar  token corresponda a uid- token no corresponde a uid- validaciones;post;;05/12/20;02:26:18

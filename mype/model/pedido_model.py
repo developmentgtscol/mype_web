@@ -118,3 +118,41 @@ class PedidoModel:
             generator = Generador()
             codigo = generator.validarGuardarInformacionError('000','solicitar  pedido cliente','post','')
             return False,codigo                 
+
+    def solicitar_pedidos(self):
+        try:
+            ref = db.reference()
+            datos=ref.child('geoPedido').get()
+            pedidos=[]
+            if datos != None:
+                for k,m in datos.items():
+                    datos_2=ref.child('geoPedidoProducto').child(m['referencia_pedido_producto']).get()
+                    productos=[]
+                    for p in datos_2:
+                        producto= {
+                            "cantidad_p":p['cantidad_producto'],
+                            "imagen":p['imagen_producto'],
+                            "key":p['key_producto'],
+                            "nombre_p":p['nombre_producto'],
+                            "precio_p":p['precio_producto'],
+                        }
+                        productos.append(producto)
+                    pedido={
+                        'key':k,
+                        'cliente':m['uid_cliente'],
+                        'precio':m['total_precio'],
+                        'cantidad':m['candidad_productos'],
+                        'fecha':m['fecha_pedido'],
+                        'hora':m['hora_pedido'],
+                        'estado':m['estado_pedido'],
+                        'productos':productos
+                    }
+                    pedidos.append(pedido)
+                return True,pedidos    
+            else:
+                return False,'no tiene pedidos'  
+        except Exception as identifier:
+            print(identifier)
+            generator = Generador()
+            codigo = generator.validarGuardarInformacionError('000','solicitar  pedido cliente','post','')
+            return False,codigo        
