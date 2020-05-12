@@ -4,11 +4,11 @@ import time
 from ficheros.codigo import Generador
 
 class PedidoModel:
-    def registrar_pedido(self,datos,uid_tienda):
+    def registrar_pedido(self,datos_pedido,uid_tienda):
        try:
             ref = db.reference()
             productos=[]
-            uid_cliente=datos['uid_cliente']
+            uid_cliente=datos_pedido['uid_cliente']
             total=0
             cantidad_productos=0
             for m in datos['datos_pedidos']:
@@ -33,9 +33,10 @@ class PedidoModel:
                         'hora_pedido':hora,
                         'estado_pedido':'En tienda',
                         'referencia_pedido_producto':uid_productos_pedido.key,
-                        'uid_tienda_pedido_asignado':uid_tienda           
+                        'uid_tienda_pedido_asignado':uid_tienda,
+                        'nombre_cliente':datos_pedido['nombre_cliente']          
                     }    
-            uid_pedido=ref.child('geoPedido').push(datos_pedido)
+            ref.child('geoPedido').push(datos_pedido)
             return True,'pedido exitoso'
        except Exception as identifier:
            print(identifier)
@@ -63,6 +64,7 @@ class PedidoModel:
                         productos.append(producto)
                     pedido={
                         'key':k,
+                        'nombre_cliente':m['nombre_cliente'],
                         'cliente':m['uid_cliente'],
                         'precio':m['total_precio'],
                         'cantidad':m['candidad_productos'],
@@ -92,6 +94,7 @@ class PedidoModel:
                     productos=[]
                     for p in datos_2:
                         producto= {
+                            
                             "cantidad_p":p['cantidad_producto'],
                             "imagen":p['imagen_producto'],
                             "key":p['key_producto'],
@@ -107,7 +110,7 @@ class PedidoModel:
                         'fecha':m['fecha_pedido'],
                         'hora':m['hora_pedido'],
                         'estado':m['estado_pedido'],
-                        'productos':productos
+                        'productos':productos,
                     }
                     pedidos.append(pedido)
                 return True,pedidos    
@@ -145,7 +148,8 @@ class PedidoModel:
                         'fecha':m['fecha_pedido'],
                         'hora':m['hora_pedido'],
                         'estado':m['estado_pedido'],
-                        'productos':productos
+                        'productos':productos,
+                        'nombre_cliente':m['nombre_cliente'],
                     }
                     pedidos.append(pedido)
                 return True,pedidos    

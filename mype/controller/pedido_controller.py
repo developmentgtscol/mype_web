@@ -21,6 +21,7 @@ class PedidoController:
                     #request.json['datos_pedidos']=[{"nombre": "Los frutos", "precio": "14523", "cantidad": 1, "key": "-M5xEFjOjUlFivUuZi-c", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fberries-1546125_1920.jpg?alt=media&token=e9576726-398c-44e9-8f61-29083658b5cb"}, {"nombre": "Piña", "precio": "52312", "cantidad": 1, "key": "-M5xEsEuyiYtRRGGyAjy", "imagen": "https://firebasestorage.googleapis.com/v0/b/mype-9c1d1.appspot.com/o/imagenProducto%2Fraspberries-1426859_1920.jpg?alt=media&token=f8cea9fa-3b1a-47ab-a929-5af0295b25a8"}]
 
                     rules = {
+                    "nombre_cliente":[Required],
                     "uid_cliente":[Required],
                     "datos_pedidos":[Required],
                     "latitud_cliente":[Required],
