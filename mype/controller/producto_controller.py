@@ -24,7 +24,8 @@ class ProductoController:
                     "precio_producto":[Required],
                     "cantidad_producto":[Required],
                     "producto_imagen":[Required],
-                    "descripción":[Required]
+                    "descripcion":[Required],
+                    "categoria":[Required,In(["aseo","bebidas","bebidas-alcoholicas","carnes","lacteos","pasabocas","frutas","medicamentos","mascotas"])]
                     }
                     respuesta=validate(rules, request.json)
                     if(respuesta[0]):

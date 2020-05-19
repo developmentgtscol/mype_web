@@ -9,8 +9,9 @@ class ProductoModel:
                 'precio_producto':datos['precio_producto'],
                 'cantidad_producto':datos['cantidad_producto'],
                 'producto_imagen':datos['producto_imagen'],
-                'descripción':datos['descripción'],
-                'uid_user_registra':datos['uid_usuario']
+                'descripcion':datos['descripcion'],
+                'uid_user_registra':datos['uid_usuario'],
+                'categoria_producto':datos['categoria']
                 }
             ref = db.reference()
             ref.child('geoPRODUCTO').push(datos_guardar)
@@ -34,7 +35,8 @@ class ProductoModel:
                         'nombre':v['nombre_producto'],
                         'precio':v['precio_producto'],
                         'imagen':v['producto_imagen'],
-                        'referencia':v['referencia_producto']
+                        'referencia':v['referencia_producto'],
+                        'categoria':v['categoria_producto']
                     }
                     dato.append(producto)
 
@@ -61,6 +63,7 @@ class ProductoModel:
                         'precio':v['precio_producto'],
                         'imagen':v['producto_imagen'],
                         'referencia':v['referencia_producto'],
+                        'categoria':v['categoria_producto']
                     }
                     dato.append(producto)
                 
@@ -70,7 +73,6 @@ class ProductoModel:
                 codigo = generator.validarGuardarInformacionError('000','solicitar producto - tienda no tiene productos disponibles- productos model','post','')
                 return False,codigo         
         except Exception as e :
-            print(e)
             generator = Generador()
             codigo = generator.validarGuardarInformacionError('000','solicitar producto cliente','post','')
             return False,codigo               
