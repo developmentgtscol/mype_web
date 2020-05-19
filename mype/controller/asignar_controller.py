@@ -31,12 +31,17 @@ class AsignarController:
                             if estado_uid_token:
                                 estado_permisoadmingerente,codigo_permisoadmingerente=validaciones.validar_tipo_admin_gerente(uid_usuario)
                                 if estado_permisoadmingerente:
-                                    asignar_model=AsignarModel()
-                                    estado_asignar,codigo_asignar=asignar_model.asignar_tienda(request.json)
-                                    if estado_asignar:
-                                        return  {'estado':True,'mensaje':'asignacion exitosa'}
+                                    uid_admintienda=request.json['uid_admin_tienda']
+                                    estado_admintiendalibre,codigo_admintiendalibre=validaciones.validar_admintienda_tienetienda(uid_admintienda)
+                                    if estado_admintiendalibre:
+                                        asignar_model=AsignarModel()
+                                        estado_asignar,codigo_asignar=asignar_model.asignar_tienda(request.json)
+                                        if estado_asignar:
+                                            return  {'estado':True,'mensaje':'asignacion exitosa'}
+                                        else:
+                                            return  {'estado':False,'codigo':codigo_asignar}
                                     else:
-                                        return  {'estado':False,'codigo':codigo_asignar}
+                                        return {'estado':False,'mensaje':codigo_admintiendalibre}
                                 else:
                                     return {'estado':False,'codigo':codigo_permisoadmingerente}
                             else:

@@ -66,6 +66,7 @@ def solicitar_lista_tiendas():
       respuesta=solicitudes_view.solicitar_lista_tiendas(request)
       return jsonify(respuesta)     
 
+
 @app.route('/asignar_tienda/',methods=['POST'])
 def solicitar_asignar_tienda():
       asignar_view=AsignarView();
@@ -117,7 +118,7 @@ def solicitar_pedidos():
       pedido_view=PedidoView()
       respuesta=pedido_view.solicitar_pedido(request)
       return jsonify(respuesta)  
-@csrf.exempt
+
 @app.route('/actualizar_estado_pedido/',methods=['POST'])
 def actualizar_estado_pedido():
       pedido_view=PedidoView()

@@ -186,4 +186,27 @@ class Validaciones:
         except Exception as e :
             print(e)
             codigo = generador.validarGuardarInformacionError("000","validar si zona de influencia ocupada -ocurrio un error servidor- validaciones","post",'')
-            return False,codigo                             
+            return False,codigo
+
+    def validar_admintienda_tienetienda(self,uid):
+        try:
+            datos = db.reference('geoTIENDAS').order_by_child('admin-tienda_asignado').equal_to(uid).get()
+            if len(datos)==0:
+                    return True,''
+            else:
+                return False,'admin-tienda ya tiene una tienda asignada'            
+        except Exception as e :
+            print(e)
+            codigo = generador.validarGuardarInformacionError("000","validar si el admintienda no tiene tienda asignada -ocurrio un error servidor- validaciones","post",'')
+            return False,codigo
+    def validar_existe_cedula_cliente(self,cedula):
+        try:
+            datos = db.reference('geoCLIENTES').order_by_child('cedula_cliente').equal_to(cedulas).get()
+            if len(datos)==0:
+                    return True,''
+            else:
+                return False,'cedula ya existe registrada'            
+        except Exception as e :
+            print(e)
+            codigo = generador.validarGuardarInformacionError("000","validar cedula existe -ocurrio un error servidor- validaciones","post",'')
+            return False,codigo                                            

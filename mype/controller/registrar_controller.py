@@ -152,18 +152,23 @@ class RegistrarController:
                 if(respuesta[0]):
                     estado_vacio,codigo_vacio=validaciones.validar_campos_vacios(request.json)
                     if estado_vacio:
-                        correo_cliente=request.json['correo_cliente']
-                        telefono_cliente=request.json['telefono_cliente']
-                        estado_email_telefono,codigo_email_telefono=validaciones.validar_email_telefono(correo_cliente,telefono_cliente)
-                        if estado_email_telefono:
+                        cedula_cliente=request.json['cedula_cliente']
+                        estado_cedula,codigo_cedula=validaciones.validar_existe_cedula_cliente(cedula_cliente)
+                        if estado_cedula:
+                            correo_cliente=request.json['correo_cliente']
+                            telefono_cliente=request.json['telefono_cliente']
+                            estado_email_telefono,codigo_email_telefono=validaciones.validar_email_telefono(correo_cliente,telefono_cliente)
+                            if estado_email_telefono:
                                 registrar_model=RegistrarModel()
                                 estado_registrar,codigo_registrar=registrar_model.registrar_cliente(request.json)
                                 if estado_registrar:
                                     return  {'estado':True,'mensaje':'registro exitoso'}
                                 else:
                                     return  {'estado':False,'codigo':codigo_registrar}
+                            else:
+                                return {'estado':False,'codigo':codigo_email_telefono} 
                         else:
-                            return {'estado':False,'codigo':codigo_email_telefono}
+                            return  {'estado':True,'mensaje':codigo_cedula}
                     else:
                         return {'estado':False,'codigo':codigo_vacio}
                 else:
