@@ -66,7 +66,6 @@ def solicitar_lista_tiendas():
       respuesta=solicitudes_view.solicitar_lista_tiendas(request)
       return jsonify(respuesta)     
 
-
 @app.route('/asignar_tienda/',methods=['POST'])
 def solicitar_asignar_tienda():
       asignar_view=AsignarView();
