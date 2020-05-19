@@ -159,4 +159,18 @@ class PedidoModel:
             print(identifier)
             generator = Generador()
             codigo = generator.validarGuardarInformacionError('000','solicitar  pedido cliente','post','')
-            return False,codigo        
+            return False,codigo
+
+
+    def actualizar_estado_pedido(self,datos):
+        try:
+            ref = db.reference()
+            ref.child('geoPedido').child(datos['uid_pedido']).update({
+            'estado_pedido':datos['estado_pedido']
+            })
+            return True,'actualizacion exitosa'
+        except Exception as identifier:
+            print(identifier)
+            generator = Generador()
+            codigo = generator.validarGuardarInformacionError('000','solicitar  pedido cliente','post','')
+            return False,codigo                

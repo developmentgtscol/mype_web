@@ -116,7 +116,13 @@ def solicitar_pedidos_cliente():
 def solicitar_pedidos():
       pedido_view=PedidoView()
       respuesta=pedido_view.solicitar_pedido(request)
-      return jsonify(respuesta)       
+      return jsonify(respuesta)  
+@csrf.exempt
+@app.route('/actualizar_estado_pedido/',methods=['POST'])
+def actualizar_estado_pedido():
+      pedido_view=PedidoView()
+      respuesta=pedido_view.actualizar_estado_pedido(request)
+      return jsonify(respuesta)
 # iniciador
 if __name__ == '__main__':
    app.run('0.0.0.0', 5000, debug=True)

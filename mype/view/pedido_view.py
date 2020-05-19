@@ -15,4 +15,8 @@ class PedidoView:
 
     def solicitar_pedido(self,request):
         respuesta=pedido_controller.solicitar_pedido(request)
-        return respuesta                
+        return respuesta
+
+    def actualizar_estado_pedido(self,request):
+        respuesta=pedido_controller.actualizar_estado_pedido(request)
+        return respuesta                    

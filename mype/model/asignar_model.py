@@ -4,9 +4,9 @@ class AsignarModel:
     def asignar_tienda(self,datos):
         try:
             ref = db.reference()
-            datos=ref.child('geoTIENDAS').update({
-    datos['uid_tienda']+'/admin-tienda_asignado':datos['uid_admin_tienda'],
-    datos['uid_tienda']+'/estado_disponibilidad': False
+            datos=ref.child('geoTIENDAS').child(datos['uid_tienda']).update({
+    'admin-tienda_asignado':datos['uid_admin_tienda'],
+    'estado_disponibilidad': True,
 })
             return True,''
         except Exception as e:
