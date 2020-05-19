@@ -33,7 +33,7 @@ class ProductoController:
                             uid_usuario=request.json['uid_usuario']
                             estado_uid_token,codigo_uid_token=validaciones.validar_uid_token(uid_usuario,codigo_token)
                             if estado_uid_token:
-                                estado_permiso,codigo_permiso=validaciones.validar_permiso_admin_getente_admintienda(uid_usuario)
+                                estado_permiso,codigo_permiso=validaciones.validar_permiso_admin_gerente_admintienda(uid_usuario)
                                 if estado_permiso:
                                         referencia_producto=request.json['referencia_producto']
                                         estado_referencia,codigo_referencia=validaciones.validar_referencia_producto(referencia_producto)
