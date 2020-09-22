@@ -32,4 +32,28 @@ class SolicitudesModel:
         except :
             generator = Generador()
             codigo = generator.validarGuardarInformacionError('000','solicitudes admin- gerente','','')
-            return False,codigo         
+            return False,codigo
+
+    def solicitar_informacion(self,uid_usuario):
+        ref = db.reference()
+        tiendas =[]
+        datos1=ref.child('geoTIENDAS').get()
+        for k ,v in datos1.items():
+            tienda={
+                'key':k,
+                'estado':v['estado_disponibilidad'],
+                'latitud':v['latitud_tienda'],
+                'longitud':v['longitud_tienda'],
+                'nombre':v['nombre_sede_tienda'],
+                'zona':v['zona_influencia'],
+                'admin-tienda':v['admin-tienda_asignado']
+            }
+            tiendas.append(tienda)
+        datos2=ref.child('geoTIENDAS').get()    
+        respuesta = {
+            'tiendas':{
+                'total':len(datos1),
+                'informacion_tiendas':tiendas
+            }
+        }    
+        return False,respuesta                 

@@ -34,7 +34,7 @@ class RegistrarModel:
                 'latitud_tienda':datos['latitud_tienda'],
                 'longitud_tienda':datos['longitud_tienda'],
                 'zona_influencia':datos['zona_influencia'],
-                'estado_disponibilidad':True,
+                'estado_disponibilidad':False,
                 'admin-tienda_asignado':''
                 }
             ref = db.reference()

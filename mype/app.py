@@ -5,6 +5,7 @@ from view.solicitudes_view import SolicitudesView
 from view.producto_view import ProductoView
 from view.asignar_view import AsignarView
 from view.pedido_view import PedidoView
+from view.chat_view import ChatView
 from setting.conexion import Conexion
 from config import Config
 from flask_wtf.csrf import CSRFProtect,generate_csrf,CSRFError
@@ -122,6 +123,27 @@ def solicitar_pedidos():
 def actualizar_estado_pedido():
       pedido_view=PedidoView()
       respuesta=pedido_view.actualizar_estado_pedido(request)
+      return jsonify(respuesta)
+
+@csrf.exempt
+@app.route('/guardar_mensaje_cliente/',methods=['POST'])
+def guardar_mensaje_cliente():
+      chat_view=ChatView()
+      respuesta=chat_view.guardar_mensaje_cliente(request)
+      return jsonify(respuesta)    
+
+@csrf.exempt
+@app.route('/solicitar_informacion/',methods=['POST'])
+def solicitar_informacion():
+      solicitudes_view=SolicitudesView()
+      respuesta=solicitudes_view.solicitar_informacion(request)
+      return jsonify(respuesta)
+
+@csrf.exempt
+@app.route('/chat_mensaje_soporte/',methods=['POST'])
+def chat_mensaje_soporte():
+      chat_view=ChatView()
+      respuesta=chat_view.chat_mensaje_soporte(request)
       return jsonify(respuesta)
 # iniciador
 if __name__ == '__main__':

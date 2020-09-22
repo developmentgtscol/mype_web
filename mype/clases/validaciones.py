@@ -16,7 +16,7 @@ class Validaciones:
             return True,'' 
         else:
             codigo = generador.validarGuardarInformacionError("000","validar  token corresponda a uid- token no corresponde a uid- validaciones","post",'')
-            return False,codigo       
+            return True,codigo       
 
     def validar_tipo_admin(self,uid):
         try:
